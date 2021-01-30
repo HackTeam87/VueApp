@@ -1,9 +1,8 @@
 <template>
   <v-app>
-    <header-page>
-      
-    </header-page>
+    <header-page></header-page>
      <v-main>
+       <pre-loader></pre-loader>
        <router-view></router-view>
      </v-main>
     <footer-page></footer-page>
@@ -16,14 +15,14 @@
 
 <script>
 import HeaderPage from '@/components/HeaderPage.vue'
-import Loader from '@/views/Loader.vue'
+import PreLoader from '@/components/PreLoader.vue'
 import FooterPage from '@/components/FooterPage.vue'
 
 export default {
   name: 'App',
   components: {
+    PreLoader,
     HeaderPage,
-    Loader,
     FooterPage
   }
 }

@@ -1,28 +1,15 @@
 <template>
   <v-footer dark padless class=" lighten-1 white--text text-center" color="#002244">
 
-    <!--    <v-container fluid grid-list-md>-->
-    <!--      <v-divider></v-divider>-->
-    <!--      <v-container>-->
-    <!--        <v-row justify="space-around">-->
-    <!--          <v-col v-for="i in  FooterLinkPay" cols="12" sm="3" >-->
-    <!--              <v-list-item :href="i.link" class="mx-auto" height="50" width="100" style="padding:5px;">-->
-    <!--                <v-img v-bind:src="i.img" ></v-img>-->
-    <!--              </v-list-item>-->
-    <!--          </v-col>-->
-    <!--        </v-row>-->
-    <!--      </v-container>-->
 
-    <!--      <v-divider></v-divider>-->
-    <!--    </v-container>-->
 
     <v-container grid-list-md>
 
       <v-layout row wrap>
         <v-flex d-flex sm3>
           <v-card flat tile>
-            <v-list v-for="i in contacts" class=" lighten-1 white--text text-center" color="#002244">
-              <v-list-item :href="`tel:`+ i.link">
+            <v-list v-for="(i ,index) in contacts" :key="index" class=" lighten-1 white--text text-center" color="#002244">
+              <v-list-item :href="'tel:'+ i.link">
                 <v-list-item-action>
                   <v-icon>mdi-phone</v-icon>
                 </v-list-item-action>
@@ -38,7 +25,7 @@
 
         <v-flex d-flex sm3>
           <v-card flat tile>
-            <v-list v-for="i in FooterLinkGroup1" class=" lighten-1 white--text text-center" color="#002244">
+            <v-list v-for="(i,index) in FooterLinkGroup1" :key="index" class=" lighten-1 white--text text-center" color="#002244">
               <v-list-item :to="i.link">
                 <v-icon>mdi-bookmark-outline</v-icon>
                 <v-list-item-content>
@@ -50,7 +37,7 @@
         </v-flex>
         <v-flex d-flex sm3>
           <v-card flat tile>
-            <v-list v-for="i in FooterLinkGroup2" class=" lighten-1 white--text text-center" color="#002244">
+            <v-list v-for="(i,index) in FooterLinkGroup2" :key="index" class=" lighten-1 white--text text-center" color="#002244">
               <v-list-item :to="i.link">
                 <v-icon>mdi-bookmark-outline</v-icon>
                 <v-list-item-content>
@@ -62,7 +49,7 @@
         </v-flex>
         <v-flex d-flex sm3>
           <v-card flat tile>
-            <v-list v-for="i in FooterLinkGroup3" class=" lighten-1 white--text text-center" color="#002244">
+            <v-list v-for="(i,index) in FooterLinkGroup3" :key="index" class=" lighten-1 white--text text-center" color="#002244">
               <v-list-item :href="i.link">
                 <v-icon>mdi-bookmark-outline</v-icon>
                 <v-list-item-content>
@@ -118,7 +105,7 @@
       <v-layout row wrap>
         <v-card-text class="white--text">
           2018 - {{ new Date().getFullYear() }} <strong>GoldeNNet <span>© All rights reserved</span></strong>
-          <v-btn v-for="icon in social" class="mx-4 white--text" icon :href="icon.link" target="_blank">
+          <v-btn v-for="(icon,index) in social" :key="index" class="mx-4 white--text" icon :href="icon.link" target="_blank">
             <v-icon size="24px">
               {{ icon.title }}
             </v-icon>
@@ -144,7 +131,7 @@ export default {
       {title: 'Домофони', link: '/intercom'},
     ],
     FooterLinkGroup2: [
-      {title: 'Безпека', link: '/security'},
+      {title: 'Безпека', link: '/main/security'},
       {title: 'Новини', link: '/news'},
       {title: 'Магазин', link: '/shop'},
     ],

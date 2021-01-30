@@ -1,30 +1,36 @@
 <template>
   <div>
-
-
-    <v-navigation-drawer absolute temporary v-model="drawer" class="hidden-md-and-up" width="100%">
+    <v-navigation-drawer absolute temporary v-model="drawer" class="hidden-md-and-up" width="80%">
       <v-container>
-        <v-card
-            v-scroll.self="onScroll"
-            class="overflow-y-auto"
-            max-height="500"
-        >
-          <v-banner
-              class="justify-center headline font-weight-light"
-              sticky
-          >
-            Scroll Me - Method invoked
+        <v-card v-scroll.self="onScroll" class="overflow-y-auto" max-height="100%">
+
+          <v-banner class="justify-center headline font-weight-light" sticky>
+            <v-list-group :value="false" no-action sub-group>
+              <template v-slot:activator>
+            <v-list-item-content>
+              <v-list-item-title>Контакти</v-list-item-title>
+            </v-list-item-content>
+              </template>
+          <v-list-item>
+            <v-list-item-title >
+              <a href="tel:+38(097) 354 45 45" style="text-decoration: none;">+38(097) 354 45 45</a>
+            </v-list-item-title>
+          </v-list-item>
+          <v-list-item>
+            <v-list-item-title >
+              <a href="tel:+38(099) 354 45 45" style="text-decoration: none; color:red;">+38(099) 354 45 45</a>
+            </v-list-item-title>
+          </v-list-item>
+          <v-list-item>
+            <v-list-item-title >
+              <a href="tel:+38(093) 354 45 45" style="text-decoration: none; color:orange;">+38(093) 354 45 45</a>
+            </v-list-item-title>
+          </v-list-item>
+        </v-list-group>
           </v-banner>
+
           <v-list>
-            <v-list-item href="https://my.golden.net.ua" target="_blank">
-              <v-icon aria-hidden="false">mdi-account</v-icon>
-              Профіль
-            </v-list-item>
-            <v-list-item href="https://test.golden.net.ua" target="_blank">
-              <v-icon aria-hidden="false">mdi-access-point-network</v-icon>
-              Speedtest
-            </v-list-item>
-            <v-list-item v-for="(item, i) in menuItems" :key="`navdrawer${i}`" :to="item.route">
+             <v-list-item v-for="(item, i) in menuItems" :key="`navdrawer${i}`" :to="item.route">
               <v-list-item-action>
                 <v-icon aria-hidden="false" left v-html="item.icon"></v-icon>
               </v-list-item-action>
@@ -32,43 +38,32 @@
                 <v-list-item-title v-text="item.title"></v-list-item-title>
               </v-list-item-content>
             </v-list-item>
-            <v-spacer></v-spacer>
           </v-list>
-           <v-list>
-            <v-list-item href="https://my.golden.net.ua" target="_blank">
-              <v-icon aria-hidden="false">mdi-account</v-icon>
-              Профіль
+          <v-list>
+            <v-list-item href="/internet" >
+              <v-icon aria-hidden="false">mdi-check</v-icon>
+              Інтернет
             </v-list-item>
-            <v-list-item href="https://test.golden.net.ua" target="_blank">
-              <v-icon aria-hidden="false">mdi-access-point-network</v-icon>
-              Speedtest
+            <v-list-item href="/intercom" >
+              <v-icon aria-hidden="false">mdi-check</v-icon>
+              Домофон
             </v-list-item>
-            <v-list-item v-for="(item, i) in menuItems" :key="`navdrawer${i}`" :to="item.route">
-              <v-list-item-action>
-                <v-icon aria-hidden="false" left v-html="item.icon"></v-icon>
-              </v-list-item-action>
-              <v-list-item-content>
-                <v-list-item-title v-text="item.title"></v-list-item-title>
-              </v-list-item-content>
+
+             <v-list-item href="/main/security" >
+              <v-icon aria-hidden="false">mdi-check</v-icon>
+              Безпека
             </v-list-item>
-            <v-spacer></v-spacer>
-          </v-list>
-           <v-list>
-            <v-list-item href="https://my.golden.net.ua" target="_blank">
-              <v-icon aria-hidden="false">mdi-account</v-icon>
-              Профіль
+             <v-list-item href="/shop" >
+              <v-icon aria-hidden="false">mdi-check</v-icon>
+              Магазин
             </v-list-item>
-            <v-list-item href="https://test.golden.net.ua" target="_blank">
-              <v-icon aria-hidden="false">mdi-access-point-network</v-icon>
-              Speedtest
+             <v-list-item href="/IoT" >
+              <v-icon aria-hidden="false">mdi-check</v-icon>
+              Розумний Дім
             </v-list-item>
-            <v-list-item v-for="(item, i) in menuItems" :key="`navdrawer${i}`" :to="item.route">
-              <v-list-item-action>
-                <v-icon aria-hidden="false" left v-html="item.icon"></v-icon>
-              </v-list-item-action>
-              <v-list-item-content>
-                <v-list-item-title v-text="item.title"></v-list-item-title>
-              </v-list-item-content>
+             <v-list-item href="/manual" >
+              <v-icon aria-hidden="false">mdi-check</v-icon>
+              Інструкції
             </v-list-item>
             <v-spacer></v-spacer>
           </v-list>
@@ -84,10 +79,10 @@
       <router-link to="/" tag="span" style="cursor: pointer;">
         <v-toolbar-title flat>
           <v-img
-              lazy-src="@/assets/img/main_page/logo-newg.png"
-              max-height="80"
-              max-width="130"
-              src="@/assets/img/main_page/logo-newg.png"
+              lazy-src="@/assets/img/logo/Goldennet_logo_white.png"
+              max-height="50"
+              max-width="90"
+              src="@/assets/img/logo/Goldennet_logo_white.png"
           ></v-img>
         </v-toolbar-title>
       </router-link>
@@ -101,7 +96,7 @@
             </v-btn>
           </template>
           <v-list>
-            <v-list-item v-for="contact  in contacts" :href="`tel:`+ contact.link">
+            <v-list-item v-for="(contact,index ) in contacts" :key="index" :href="`tel:`+ contact.link">
               <v-list-item-title>
                 {{ contact.title }}
               </v-list-item-title>
@@ -122,7 +117,7 @@
           </template>
 
           <v-list>
-            <v-list-item v-for="item in company" :to="item.link">
+            <v-list-item v-for="(item, index) in company" :key="index" :to="item.link">
               <v-list-item-title to="/">{{ item.title }}</v-list-item-title>
             </v-list-item>
           </v-list>
@@ -180,9 +175,8 @@ export default ({
       return [
 
         {
-          icon: 'mdi-home-automation',
+          icon: 'mdi-home-automation  large',
           title: '',
-          m_title: '',
           route: '/'
         },
 

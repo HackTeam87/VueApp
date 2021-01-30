@@ -4,7 +4,7 @@ import axios from 'axios'
 
 
 Vue.use(Vuex);
-let url = 'http://jsonplaceholder.typicode.com/posts'
+let url = 'https://mag.golden.net.ua/product-list/p'
 let store = new Vuex.Store({
     state: {
         products: []
@@ -17,11 +17,11 @@ let store = new Vuex.Store({
     ,
     actions: {
         GET_PRODUCTS_FROM_API({commit}){
-            return axios('http://jsonplaceholder.typicode.com/posts',{
+            return axios(url,{
                 method: "GET"
             })
                 .then((products) => {
-                    commit('SET_PRODUCTS_TO_STATE', products.data);
+                    commit('SET_PRODUCTS_TO_STATE', products.data.products);
                     return products;
             })
 
