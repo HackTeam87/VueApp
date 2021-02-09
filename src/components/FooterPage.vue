@@ -2,13 +2,13 @@
   <v-footer dark padless class=" lighten-1 white--text text-center" color="#002244">
 
 
-
     <v-container grid-list-md>
 
       <v-layout row wrap>
         <v-flex d-flex sm3>
           <v-card flat tile>
-            <v-list v-for="(i ,index) in contacts" :key="index" class=" lighten-1 white--text text-center" color="#002244">
+            <v-list v-for="(i ,index) in contacts" :key="index" class=" lighten-1 white--text text-center"
+                    color="#002244">
               <v-list-item :href="'tel:'+ i.link">
                 <v-list-item-action>
                   <v-icon>mdi-phone</v-icon>
@@ -25,7 +25,8 @@
 
         <v-flex d-flex sm3>
           <v-card flat tile>
-            <v-list v-for="(i,index) in FooterLinkGroup1" :key="index" class=" lighten-1 white--text text-center" color="#002244">
+            <v-list v-for="(i,index) in FooterLinkGroup1" :key="index" class=" lighten-1 white--text text-center"
+                    color="#002244">
               <v-list-item :to="i.link">
                 <v-icon>mdi-bookmark-outline</v-icon>
                 <v-list-item-content>
@@ -37,7 +38,8 @@
         </v-flex>
         <v-flex d-flex sm3>
           <v-card flat tile>
-            <v-list v-for="(i,index) in FooterLinkGroup2" :key="index" class=" lighten-1 white--text text-center" color="#002244">
+            <v-list v-for="(i,index) in FooterLinkGroup2" :key="index" class=" lighten-1 white--text text-center"
+                    color="#002244">
               <v-list-item :to="i.link">
                 <v-icon>mdi-bookmark-outline</v-icon>
                 <v-list-item-content>
@@ -49,7 +51,8 @@
         </v-flex>
         <v-flex d-flex sm3>
           <v-card flat tile>
-            <v-list v-for="(i,index) in FooterLinkGroup3" :key="index" class=" lighten-1 white--text text-center" color="#002244">
+            <v-list v-for="(i,index) in FooterLinkGroup3" :key="index" class=" lighten-1 white--text text-center"
+                    color="#002244">
               <v-list-item :href="i.link">
                 <v-icon>mdi-bookmark-outline</v-icon>
                 <v-list-item-content>
@@ -105,7 +108,8 @@
       <v-layout row wrap>
         <v-card-text class="white--text">
           2018 - {{ new Date().getFullYear() }} <strong>GoldeNNet <span>© All rights reserved</span></strong>
-          <v-btn v-for="(icon,index) in social" :key="index" class="mx-4 white--text" icon :href="icon.link" target="_blank">
+          <v-btn v-for="(icon,index) in social" :key="index" class="mx-4 white--text" icon :href="icon.link"
+                 target="_blank">
             <v-icon size="24px">
               {{ icon.title }}
             </v-icon>
@@ -136,27 +140,9 @@ export default {
       {title: 'Магазин', link: '/shop'},
     ],
     FooterLinkGroup3: [
+      {title: 'Інструкції', link: '/manual'},
       {title: 'Профіль', link: 'https://my.golden.net.ua'},
-      {title: 'ТелеграмБот', link: 'https://t.me/GoldenNetUaBot'},
       {title: 'SpeedTest', link: 'https://test.golden.net.ua'},
-    ],
-    FooterLinkPay: [
-      {
-        img: 'http://185.190.150.21:8080/img/ibox3.f38f1f40.png',
-        link: 'http://185.190.150.21:8080/img/2click.bff49012.png'
-      },
-      {
-        img: 'http://185.190.150.21:8080/img/ibox3.f38f1f40.png',
-        link: 'http://185.190.150.21:8080/img/city-24.a22e9cee.png'
-      },
-      {
-        img: 'http://185.190.150.21:8080/img/ibox3.f38f1f40.png',
-        link: 'http://185.190.150.21:8080/img/easypay4.56d9c6c8.png'
-      },
-      {
-        img: 'http://185.190.150.21:8080/img/ibox3.f38f1f40.png',
-        link: 'http://185.190.150.21:8080/img/ibox3.f38f1f40.png'
-      },
     ],
     contacts: [
       {title: '+38(097) 354 4545', link: '0973544545'},
@@ -167,7 +153,3 @@ export default {
 
 }
 </script>
-
-<style scoped>
-
-</style>

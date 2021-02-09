@@ -1,81 +1,120 @@
 <template>
-  <div>
-    <v-navigation-drawer absolute temporary v-model="drawer" class="hidden-md-and-up" width="80%">
-      <v-container>
-        <v-card v-scroll.self="onScroll" class="overflow-y-auto" max-height="100%">
+  <nav>
+    <v-navigation-drawer temporary app v-model="drawer" width="100%" v-scroll.self="onScroll" class="overflow-y-auto"
+                         max-height="100%">
+      <v-container class="">
+        <v-spacer></v-spacer>
+        <router-link to="/" tag="span" style="cursor: pointer;">
+          <v-toolbar-title flat>
+            <v-img
+                lazy-src="@/assets/img/logo/Goldennet_logo_black.png"
+                max-height="60"
+                max-width="100"
+                src="@/assets/img/logo/Goldennet_logo_black.png"
+            ></v-img>
+          </v-toolbar-title>
+        </router-link>
+        <v-spacer></v-spacer>
 
-          <v-banner class="justify-center headline font-weight-light" sticky>
-            <v-list-group :value="false" no-action sub-group>
-              <template v-slot:activator>
+
+        <v-list-group :value="false" no-action sub-group>
+          <template v-slot:activator>
             <v-list-item-content>
               <v-list-item-title>Контакти</v-list-item-title>
             </v-list-item-content>
-              </template>
+          </template>
           <v-list-item>
-            <v-list-item-title >
+            <v-list-item-title>
               <a href="tel:+38(097) 354 45 45" style="text-decoration: none;">+38(097) 354 45 45</a>
             </v-list-item-title>
           </v-list-item>
           <v-list-item>
-            <v-list-item-title >
+            <v-list-item-title>
               <a href="tel:+38(099) 354 45 45" style="text-decoration: none; color:red;">+38(099) 354 45 45</a>
             </v-list-item-title>
           </v-list-item>
           <v-list-item>
-            <v-list-item-title >
+            <v-list-item-title>
               <a href="tel:+38(093) 354 45 45" style="text-decoration: none; color:orange;">+38(093) 354 45 45</a>
             </v-list-item-title>
           </v-list-item>
         </v-list-group>
-          </v-banner>
 
-          <v-list>
-             <v-list-item v-for="(item, i) in menuItems" :key="`navdrawer${i}`" :to="item.route">
-              <v-list-item-action>
-                <v-icon aria-hidden="false" left v-html="item.icon"></v-icon>
-              </v-list-item-action>
+        <v-divider></v-divider>
+
+        <v-list>
+          <v-list-item v-for="(item, i) in menuItems" :key="`navdrawer${i}`" :to="item.route">
+            <v-list-item-action>
+              <v-icon aria-hidden="false" left v-html="item.icon"></v-icon>
+            </v-list-item-action>
+            <v-list-item-content>
+              <v-list-item-title v-text="item.title"></v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+        </v-list>
+        <v-list>
+          <v-list-item href="/internet">
+            <v-icon aria-hidden="false">mdi-check</v-icon>
+            Інтернет
+          </v-list-item>
+          <v-list-item href="/intercom">
+            <v-icon aria-hidden="false">mdi-check</v-icon>
+            Домофон
+          </v-list-item>
+          <v-list-item href="/news">
+            <v-icon aria-hidden="false">mdi-check</v-icon>
+            Новини
+          </v-list-item>
+          <v-divider></v-divider>
+          <v-list-group :value="true" no-action sub-group>
+            <template v-slot:activator>
               <v-list-item-content>
-                <v-list-item-title v-text="item.title"></v-list-item-title>
+                <v-list-item-title>Безпека</v-list-item-title>
               </v-list-item-content>
-            </v-list-item>
-          </v-list>
-          <v-list>
-            <v-list-item href="/internet" >
+            </template>
+            <v-list-item href="/main/video">
               <v-icon aria-hidden="false">mdi-check</v-icon>
-              Інтернет
+              Відеоспостереження
             </v-list-item>
-            <v-list-item href="/intercom" >
+            <v-list-item href="/main/security">
               <v-icon aria-hidden="false">mdi-check</v-icon>
-              Домофон
+              Контроль Доступу
             </v-list-item>
+            <v-list-item href="/main/alert">
+              <v-icon aria-hidden="false">mdi-check</v-icon>
+              Охоронна Сигналізація
+            </v-list-item>
+          </v-list-group>
+          <v-divider></v-divider>
+          <v-list-item href="/IoT">
+            <v-icon aria-hidden="false">mdi-check</v-icon>
+            Розумний Дім
+          </v-list-item>
+           <v-list-item href="/shop">
+            <v-icon aria-hidden="false">mdi-check</v-icon>
+            Магазин
+          </v-list-item>
+          <v-list-item href="/manual">
+            <v-icon aria-hidden="false">mdi-check</v-icon>
+            Інструкції
+          </v-list-item>
+          <v-spacer></v-spacer>
+        </v-list>
 
-             <v-list-item href="/main/security" >
-              <v-icon aria-hidden="false">mdi-check</v-icon>
-              Безпека
-            </v-list-item>
-             <v-list-item href="/shop" >
-              <v-icon aria-hidden="false">mdi-check</v-icon>
-              Магазин
-            </v-list-item>
-             <v-list-item href="/IoT" >
-              <v-icon aria-hidden="false">mdi-check</v-icon>
-              Розумний Дім
-            </v-list-item>
-             <v-list-item href="/manual" >
-              <v-icon aria-hidden="false">mdi-check</v-icon>
-              Інструкції
-            </v-list-item>
-            <v-spacer></v-spacer>
-          </v-list>
-        </v-card>
+        <v-divider></v-divider>
+
+        <v-card-text class="black--text">
+          2018 - {{ new Date().getFullYear() }} <strong>GoldeNNet  <span>© All rights reserved</span> </strong>
+        </v-card-text>
       </v-container>
+
     </v-navigation-drawer>
 
 
-    <v-app-bar relative app dark  color="#002244">
-
+    <v-app-bar relative app dark color="#002244">
 
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" class="hidden-md-and-up"></v-app-bar-nav-icon>
+
       <router-link to="/" tag="span" style="cursor: pointer;">
         <v-toolbar-title flat>
           <v-img
@@ -142,7 +181,7 @@
     </v-app-bar>
 
 
-  </div>
+  </nav>
 
 </template>
 
@@ -159,6 +198,7 @@ export default ({
       ],
       company: [
         {title: 'Про Компанію', link: '/about'},
+        {title: 'Документи', link: '/docs'},
         {title: 'Новини', link: '/news'},
         {title: 'Партнери', link: '/partners'},
       ],
@@ -174,11 +214,11 @@ export default ({
     menuItems() {
       return [
 
-        {
-          icon: 'mdi-home-automation  large',
-          title: '',
-          route: '/'
-        },
+        // {
+        //   icon: 'mdi-home-automation  large',
+        //   title: '',
+        //   route: '/'
+        // },
 
       ]
     }

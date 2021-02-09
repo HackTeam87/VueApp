@@ -19,7 +19,7 @@
           <v-card  hover data-aos="zoom-in" data-aos-easing="ease" href="/">
               <v-card-title class="font-weight-medium  headline">Контроль доступу</v-card-title>
               <v-img class="white--text align-end" height="150px"
-                     src="@/assets/img/security_page/control.webp">
+                     src="@/assets/img/security_page/exit-control.webp">
               </v-img>
               <v-card-text>
                 <v-icon aria-hidden="false">mdi-chevron-double-down</v-icon>
@@ -30,7 +30,7 @@
           <v-card  hover data-aos="zoom-in" data-aos-easing="ease" href="/">
               <v-card-title class="font-weight-medium  headline">Охоронна сигналізація</v-card-title>
               <v-img class="white--text align-end" height="150px"
-                     src="@/assets/img/security_page/security.webp">
+                     src="@/assets/img/security_page/new-security.webp">
               </v-img>
               <v-card-text>
                 <v-icon aria-hidden="false">mdi-chevron-double-down</v-icon>

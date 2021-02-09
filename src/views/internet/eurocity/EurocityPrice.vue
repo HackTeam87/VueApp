@@ -1,5 +1,5 @@
 <template>
-  <div class="white lighten-3">
+  <div class="white lighten-3" style="margin-top: 100px;">
     <h1 class="heading">Жк Евромісто</h1>
     <v-container>
       <v-row no-gutters>
@@ -99,43 +99,6 @@ export default {
         price_30: [
           {
             name: '30 Мбіт/с',
-            price: 120,
-            activate: true
-          },
-          {
-            name: '+ Зовнішній IP',
-            price: 30,
-            activate: false
-          },
-          {
-            name: '+ TV 154 канали',
-            price: 0,
-            activate: true
-          },
-          {
-            name: '+ TV 208 каналів',
-            price: 50,
-            activate: false
-          },
-          {
-            name: '+ TV 210 каналів + Футбол',
-            price: 80,
-            activate: false
-          },
-          {
-            name: '+ TV 224 канали',
-            price: 100,
-            activate: false
-          },
-          {
-            name: '+ TV 226 каналів + Футбол',
-            price: 120,
-            activate: false
-          }
-        ],
-        price_50: [
-          {
-            name: '50 Мбіт/с',
             price: 140,
             activate: true
           },
@@ -145,34 +108,71 @@ export default {
             activate: false
           },
           {
-            name: '+ TV 154 канали',
-            price: 0,
-            activate: true
+            name: '+ TV 194 канали',
+            price: 30,
+            activate: false
           },
           {
-            name: '+ TV 208 каналів',
+            name: '+ TV 247 каналів',
             price: 50,
             activate: false
           },
           {
-            name: '+ TV 210 каналів + Футбол',
+            name: '+ TV 249 каналів + Футбол',
             price: 80,
             activate: false
           },
           {
-            name: '+ TV 224 канали',
+            name: '+ TV 261 канали',
             price: 100,
             activate: false
           },
           {
-            name: '+ TV 226 каналів + Футбол',
+            name: '+ TV 263 каналів + Футбол',
+            price: 120,
+            activate: false
+          }
+        ],
+        price_50: [
+          {
+            name: '50 Мбіт/с',
+            price: 160,
+            activate: true
+          },
+          {
+            name: '+ Зовнішній IP',
+            price: 30,
+            activate: false
+          },
+          {
+            name: '+ TV 194 канали',
+            price: 30,
+            activate: false
+          },
+          {
+            name: '+ TV 247 каналів',
+            price: 50,
+            activate: false
+          },
+          {
+            name: '+ TV 249 каналів + Футбол',
+            price: 80,
+            activate: false
+          },
+          {
+            name: '+ TV 261 канали',
+            price: 100,
+            activate: false
+          },
+          {
+            name: '+ TV 263 каналів + Футбол',
             price: 120,
             activate: false
           }],
         price_100: [
           {
             name: '100 Мбіт/с',
-            price: 180,
+            price: 210,
             activate: true
           },
           {
@@ -181,34 +181,34 @@ export default {
             activate: false
           },
           {
-            name: '+ TV 154 канали',
-            price: 0,
-            activate: true
+            name: '+ TV 194 канали',
+            price: 30,
+            activate: false
           },
           {
-            name: '+ TV 208 каналів',
+            name: '+ TV 247 каналів',
             price: 50,
             activate: false
           },
           {
-            name: '+ TV 210 каналів + Футбол',
+            name: '+ TV 249 каналів + Футбол',
             price: 80,
             activate: false
           },
           {
-            name: '+ TV 224 канали',
+            name: '+ TV 261 канали',
             price: 100,
             activate: false
           },
           {
-            name: '+ TV 226 каналів + Футбол',
+            name: '+ TV 263 каналів + Футбол',
             price: 120,
             activate: false
           }],
         price_500: [
           {
             name: '500 Мбіт/с',
-            price: 250,
+            price: 300,
             activate: true
           },
           {
@@ -217,27 +217,27 @@ export default {
             activate: false
           },
           {
-            name: '+ TV 154 канали',
-            price: 0,
-            activate: true
+            name: '+ TV 194 канали',
+            price: 30,
+            activate: false
           },
           {
-            name: '+ TV 208 каналів',
+            name: '+ TV 247 каналів',
             price: 50,
             activate: false
           },
           {
-            name: '+ TV 210 каналів + Футбол',
+            name: '+ TV 249 каналів + Футбол',
             price: 80,
             activate: false
           },
           {
-            name: '+ TV 224 канали',
+            name: '+ TV 261 канали',
             price: 100,
             activate: false
           },
           {
-            name: '+ TV 226 каналів + Футбол',
+            name: '+ TV 263 каналів + Футбол',
             price: 120,
             activate: false
           }],

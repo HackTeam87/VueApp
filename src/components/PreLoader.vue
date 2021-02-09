@@ -21,7 +21,7 @@ export default {
       if (document.readyState == "complete") {
         setTimeout(() => {
           this.isloaded = true;
-        }, 1000);
+        }, 700);
 
       }
     }

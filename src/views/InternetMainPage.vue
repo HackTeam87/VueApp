@@ -29,7 +29,7 @@
       <v-layout row wrap>
 
         <v-flex d-flex sm4>
-          <v-card href="/internet/price/eurocity" hover data-aos="zoom-in" data-aos-easing="ease" >
+          <v-card href="/internet/price/daniya" hover data-aos="zoom-in" data-aos-easing="ease" >
 
               <v-card-title class="text-right">Жк Данія</v-card-title>
               <v-img class="white--text align-end" height="150px"

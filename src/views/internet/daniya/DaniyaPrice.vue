@@ -1,5 +1,5 @@
 <template>
-  <div class="white lighten-3">
+  <div class="white lighten-3" style="margin-top: 100px;">
     <h1 class="heading">Жк Данія</h1>
     <v-container>
       <v-row no-gutters>
@@ -108,27 +108,27 @@ export default {
             activate: false
           },
           {
-            name: '+ TV 154 канали',
+            name: '+ TV 194 канали',
             price: 0,
             activate: true
           },
           {
-            name: '+ TV 208 каналів',
+            name: '+ TV 247 каналів',
             price: 50,
             activate: false
           },
           {
-            name: '+ TV 210 каналів + Футбол',
+            name: '+ TV 249 каналів + Футбол',
             price: 80,
             activate: false
           },
           {
-            name: '+ TV 224 канали',
+            name: '+ TV 261 канали',
             price: 100,
             activate: false
           },
           {
-            name: '+ TV 226 каналів + Футбол',
+            name: '+ TV 263 каналів + Футбол',
             price: 120,
             activate: false
           }
@@ -145,27 +145,27 @@ export default {
             activate: false
           },
           {
-            name: '+ TV 154 канали',
+            name: '+ TV 194 канали',
             price: 0,
             activate: true
           },
           {
-            name: '+ TV 208 каналів',
+            name: '+ TV 247 каналів',
             price: 50,
             activate: false
           },
           {
-            name: '+ TV 210 каналів + Футбол',
+            name: '+ TV 249 каналів + Футбол',
             price: 80,
             activate: false
           },
           {
-            name: '+ TV 224 канали',
+            name: '+ TV 261 канали',
             price: 100,
             activate: false
           },
           {
-            name: '+ TV 226 каналів + Футбол',
+            name: '+ TV 263 каналів + Футбол',
             price: 120,
             activate: false
           }],
@@ -181,27 +181,27 @@ export default {
             activate: false
           },
           {
-            name: '+ TV 154 канали',
+            name: '+ TV 194 канали',
             price: 0,
             activate: true
           },
           {
-            name: '+ TV 208 каналів',
+            name: '+ TV 247 каналів',
             price: 50,
             activate: false
           },
           {
-            name: '+ TV 210 каналів + Футбол',
+            name: '+ TV 249 каналів + Футбол',
             price: 80,
             activate: false
           },
           {
-            name: '+ TV 224 канали',
+            name: '+ TV 261 канали',
             price: 100,
             activate: false
           },
           {
-            name: '+ TV 226 каналів + Футбол',
+            name: '+ TV 263 каналів + Футбол',
             price: 120,
             activate: false
           }],
@@ -217,27 +217,27 @@ export default {
             activate: false
           },
           {
-            name: '+ TV 154 канали',
+            name: '+ TV 194 канали',
             price: 0,
             activate: true
           },
           {
-            name: '+ TV 208 каналів',
+            name: '+ TV 247 каналів',
             price: 50,
             activate: false
           },
           {
-            name: '+ TV 210 каналів + Футбол',
+            name: '+ TV 249 каналів + Футбол',
             price: 80,
             activate: false
           },
           {
-            name: '+ TV 224 канали',
+            name: '+ TV 261 канали',
             price: 100,
             activate: false
           },
           {
-            name: '+ TV 226 каналів + Футбол',
+            name: '+ TV 263 каналів + Футбол',
             price: 120,
             activate: false
           }],

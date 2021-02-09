@@ -1,122 +1,178 @@
 <template>
   <div>
-
-    <v-container fluid class="">
-      <v-row>
-
-        <v-col cols="12" sm="12">
-          <template>
-
+    <v-container >
             <v-tabs color="deep-purple accent-4" center>
-              <v-tab >Роутери</v-tab>
+              <v-tab v-for="(group, index) in GROUPS" :key="index">{{ group.tag }}</v-tab>
               <v-tab-item>
                 <v-container fluid>
-                  <v-row>
-                    <v-col v-for="(product, index) in PRODUCTS" :key="index"  class="mx-auto" max-width="210" cols="12" sm="3">
-                      <v-card>
+                  <v-row >
+                    <v-col  v-for="product in PRODUCTS" :key="product.id" class="mx-auto" max-width="250" cols="12" sm="6">
+                      <v-card v-if="product.group == 4">
                         <v-card-text>
-                          <div class="font-weight-light subtitle-1  text-right ">Ціна: <span style="color:red;">{{ product.price }}</span>.грн
+                          <div class="font-weight-light subtitle-1  text-right ">Ціна: <span
+                              style="color:red;">{{ product.price }}</span>.грн
                           </div>
                           <p class="headline font-weight-light text-uppercase">{{ product.name }}</p>
 
-                          <v-img class="white--text align-end" height="200px" v-bind:src="product.img"></v-img>
+                          <v-img class="white--text align-end" height="280px" v-bind:src="product.img"></v-img>
 
                           <div class="text--primary">
                             {{ product.short_description }}
                           </div>
                         </v-card-text>
+                         <ProductDetailPage v-show="clickedProduct === product.id" v-bind:product="product"></ProductDetailPage>
                         <v-card-actions>
-                          <v-btn text color="primary" @click="reveal = true">
-                            <v-icon aria-hidden="false" class="display-1">mdi-chevron-double-up</v-icon>
-                          </v-btn>
-                        </v-card-actions>
-
-                        <v-expand-transition>
-                          <v-card v-if="reveal" class="transition-fast-in-fast-out v-card--reveal"
-                                  style="height: 100%;">
-                            <v-card-text class="pb-0">
-                              <p class="display-1 text--primary">
-                                Детальніше
-                              </p>
-                              <p>{{ product.description }}</p>
-                            </v-card-text>
-                            <v-card-actions class="pt-0">
-                              <v-btn text color="primary" @click="reveal = false">
-                                <v-icon aria-hidden="false" class="display-1">mdi-chevron-double-down</v-icon>
+                          <v-spacer></v-spacer>
+                              <v-btn small replace class="primary"  @click="clickedProduct = product.id">
+                                Детально
+                                <v-icon>
+                                  mdi-chevron-double-right
+                                </v-icon>
                               </v-btn>
-                            </v-card-actions>
-                          </v-card>
-                        </v-expand-transition>
+                        </v-card-actions>
                       </v-card>
                     </v-col>
+
+                  </v-row>
+                </v-container>
+              </v-tab-item>
+              <v-tab-item>
+                <v-container fluid>
+                  <v-row >
+                    <v-col  v-for="product in PRODUCTS" :key="product.id" class="mx-auto" max-width="250" cols="12" sm="4">
+                      <v-card v-if="product.group == 5">
+                        <v-card-text>
+                          <div class="font-weight-light subtitle-1  text-right ">Ціна: <span
+                              style="color:red;">{{ product.price }}</span>.грн
+                          </div>
+                          <p class="headline font-weight-light text-uppercase">{{ product.name }}</p>
+
+                          <v-img class="white--text align-end" height="280px" v-bind:src="product.img"></v-img>
+
+                          <div class="text--primary">
+                            {{ product.short_description }}
+                          </div>
+                        </v-card-text>
+                         <ProductDetailPage v-show="clickedProduct === product.id" v-bind:product="product"></ProductDetailPage>
+                        <v-card-actions>
+                          <v-spacer></v-spacer>
+                              <v-btn small replace class="indigo" style="color:white;"  @click="clickedProduct = product.id">
+                                Детально
+                                <v-icon>
+                                  mdi-chevron-double-right
+                                </v-icon>
+                              </v-btn>
+                        </v-card-actions>
+                      </v-card>
+                    </v-col>
+
+                  </v-row>
+                </v-container>
+              </v-tab-item>
+              <v-tab-item>
+                <v-container fluid>
+                  <v-row >
+                    <v-col  v-for="product in PRODUCTS" :key="product.id" class="mx-auto" max-width="250" cols="12" sm="4">
+                      <v-card v-if="product.group == 6">
+                        <v-card-text>
+                          <div class="font-weight-light subtitle-1  text-right ">Ціна: <span
+                              style="color:red;">{{ product.price }}</span>.грн
+                          </div>
+                          <p class="headline font-weight-light text-uppercase">{{ product.name }}</p>
+
+                          <v-img class="white--text align-end" height="280px" v-bind:src="product.img"></v-img>
+
+                          <div class="text--primary">
+                            {{ product.short_description }}
+                          </div>
+                        </v-card-text>
+                         <ProductDetailPage v-show="clickedProduct === product.id" v-bind:product="product"></ProductDetailPage>
+                        <v-card-actions>
+                          <v-spacer></v-spacer>
+                              <v-btn small replace class="primary"  @click="clickedProduct = product.id">
+                                Детально
+                                <v-icon>
+                                  mdi-chevron-double-right
+                                </v-icon>
+                              </v-btn>
+                        </v-card-actions>
+                      </v-card>
+                    </v-col>
+
+                  </v-row>
+                </v-container>
+              </v-tab-item>
+              <v-tab-item>
+                <v-container fluid>
+                  <v-row >
+                    <v-col  v-for="product in PRODUCTS" :key="product.id" class="mx-auto" max-width="250" cols="12" sm="4">
+                      <v-card v-if="product.group == 7">
+                        <v-card-text>
+                          <div class="font-weight-light subtitle-1  text-right ">Ціна: <span
+                              style="color:red;">{{ product.price }}</span>.грн
+                          </div>
+                          <p class="headline font-weight-light text-uppercase">{{ product.name }}</p>
+
+                          <v-img class="white--text align-end" height="280px" v-bind:src="product.img"></v-img>
+
+                          <div class="text--primary">
+                            {{ product.short_description }}
+                          </div>
+                        </v-card-text>
+                         <ProductDetailPage v-show="clickedProduct === product.id" v-bind:product="product"></ProductDetailPage>
+                        <v-card-actions>
+                          <v-spacer></v-spacer>
+                              <v-btn small replace class="primary"  @click="clickedProduct = product.id">
+                                Детально
+                                <v-icon>
+                                  mdi-chevron-double-right
+                                </v-icon>
+                              </v-btn>
+                        </v-card-actions>
+                      </v-card>
+                    </v-col>
+
                   </v-row>
                 </v-container>
               </v-tab-item>
             </v-tabs>
-
-
-            <v-chip outlined>
-              <v-icon left>
-                mdi-check
-              </v-icon>
-              сортування
-            </v-chip>
-            <v-chip class="ma-2" color="deep-purple accent-4" outlined>
-              Від дешевих до дорогих
-            </v-chip>
-            <v-chip class="ma-2" color="deep-purple accent-4" outlined>
-              Від дорогих до дешевих
-            </v-chip>
-            <v-chip class="ma-2" color="deep-purple accent-4" outlined>
-              За рейтингом
-            </v-chip>
-
-
-          </template>
-        </v-col>
-
-      </v-row>
-
     </v-container>
   </div>
 </template>
 
 
 <script>
+import ProductDetailPage from '@/views/shop/ProductDetailPage.vue'
 import {mapActions, mapGetters} from 'vuex'
 
 export default {
+  name: 'product-filter-page',
+  components: {
+    ProductDetailPage
+  },
   data: () => ({
-    reveal: false,
-    selectedItem: 1,
-    groups: [
-      {title: 'Домофони', icon: 'mdi-phone-forward'},
-      {title: 'Роутери', icon: 'mdi-access-point'},
-      {title: 'Кронштейни', icon: 'mdi-code-brackets'},
-      {title: 'Кабель', icon: 'mdi-ethernet-cable'},
-    ],
-    filters: {
-     
-    }
+    clickedProduct: 0
   }),
   methods: {
-    ...mapActions([
-      'GET_PRODUCTS_FROM_API'
-    ]),
+    ...mapActions(['GET_PRODUCTS_FROM_API', 'GET_GROUPS_FROM_API']),
   },
   computed: {
-    ...mapGetters(['PRODUCTS']),
+    ...mapGetters(['PRODUCTS', 'GROUPS'])
   },
   mounted() {
     this.GET_PRODUCTS_FROM_API()
         .then((response) => {
           if (response.data) {
-            console.log('DATA Arrived!')
+            console.log('DATA PRODUCTS Arrived!')
           }
-        })
+        }),
+        this.GET_GROUPS_FROM_API()
+            .then((response) => {
+              if (response.data) {
+                console.log('DATA GROUPS Arrived!')
+              }
+            })
   }
-
-
 }
 </script>
 <style scoped>
