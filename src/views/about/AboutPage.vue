@@ -2,71 +2,153 @@
   <div class="main">
     <h1 class="heading">Про компанію</h1>
     <v-container>
-      <v-switch
-      v-model="reverse"
-      label="Toggle reverse"
-    ></v-switch>
-    <v-timeline
-      :reverse="reverse"
-      :dense="$vuetify.breakpoint.smAndDown"
-    >
-      <v-timeline-item
-        v-for="n in 2"
-        :key="n"
-      >
-        <span slot="opposite">Tus eu perfecto</span>
-        <v-card class="elevation-2">
-          <v-card-title class="headline">
-            Lorem ipsum
-          </v-card-title>
-          <v-card-text>
-            Lorem ipsum dolor sit amet, no nam oblique veritus. Commune scaevola imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae.
-          </v-card-text>
-        </v-card>
-      </v-timeline-item>
-    </v-timeline>
-    <v-timeline
-      :reverse="reverse"
-      dense
-    >
-      <v-timeline-item
-        v-for="n in 2"
-        :key="n"
-      >
-        <span slot="opposite">Tus eu perfecto</span>
-        <v-card class="elevation-2">
-          <v-card-title class="headline">
-            Lorem ipsum
-          </v-card-title>
-          <v-card-text>
-            Lorem ipsum dolor sit amet, no nam oblique veritus. Commune scaevola imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae.
-          </v-card-text>
-        </v-card>
-      </v-timeline-item>
-    </v-timeline>
-    <v-card-text class=" indigo white--text pt-0">
-        Інтернет провайдер <span>GoldeNNet</span> успішно працює на ринку послуг
-        доступу в Інтернет з 2018 року.
-        Висока якість послуг і сервісу, доступні ціни, а також індивідуальний підхід до кожного
-        клієнта, дозволили компанії <span>GoldeNNet</span> завоювати довіру широкого
-        кола
-        користувачів мережі Інтернет і знайти репутацію надійного та вигідного партнера по бізнесу.
-      </v-card-text>
+      <v-row class="mb-6" no-gutters>
+        <v-col sm6>
+
+          <v-img
+              max-height="840"
+              max-width="600"
+              src="@/assets/img/about/meeting.webp"
+          ></v-img>
+
+        </v-col>
+        <v-col sm6>
+          <v-list>
+            <v-list-item>
+              <p class="text-sm-left subtitle-1">
+                Наша компанія інтернет-провайдер <span class="subtitle-2 text-uppercase heading">«ГОЛДЕННЕТ»</span> з
+                2018 року
+                розвивається так само стрімко та швидко,
+                як і швидкість інтернету, що ми пропонуємо.
+                Наша молода компанія працює лише з високоосвіченими фахівцями
+                та сертифікованим обладнанням відомих світових брендів.
+              </p>
+            </v-list-item>
+
+            <v-list-item>
+              <p class="text-sm-left title">
+                Послуги, якими Ви можете скористатися в нашій компанії:
+              </p>
+            </v-list-item>
+            <v-list-item>
+              <p class="text-sm-left subtitle-1 text-uppercase">
+                • Підключення високошвидкісного Інтернету + телебачення;
+              </p>
+            </v-list-item>
+            <v-list-item>
+              <p class="text-sm-left subtitle-1 text-uppercase">
+                • Встановлення та обслуговування аудіо- та відеодомофонів;
+              </p>
+            </v-list-item>
+            <v-list-item>
+              <p class="text-sm-left subtitle-1 text-uppercase">
+                • Оснащення програмою «Розумний будинок»,
+                «Розумний ключ», «Фейсайді» ( в доступ в під’їзд по розпізнаванню по обличу)
+              </p>
+            </v-list-item>
+            <v-list-item>
+              <p class="text-sm-left subtitle-1 text-uppercase">
+                • Відеонагляд та системи безпеки ( будинків, квартир, комерційних приміщень і т. д.)
+              </p>
+            </v-list-item>
+            <br>
+            <v-list-item>
+              <p class="text-sm-left subtitle-1">
+                Наша компанія не знає, що таке «стоп розвиток», саме тому ми постійно розвиваємося,
+                співпрацюємо з кращими спеціалістами та фахівцями,
+                слідкуємо за новинками у сфері техніки, яка обов’язково має сертифікати якості.
+              </p>
+            </v-list-item>
+          </v-list>
+
+        </v-col>
+      </v-row>
     </v-container>
+
+    <v-container>
+      <h4 class="heading  ">ЧОМУ ВАРТО ОБРАТИ «ГОЛДЕННЕТ»?</h4>
+      <v-timeline :reverse="reverse" dense>
+        <v-timeline-item>
+          <v-card class="elevation-5">
+            <v-card-text class="title">
+              За свою продуктивну працю ми встигли зарекомендувати себе як надійний партнер,
+              з яким співпрацюють великі відомі компанії України.
+            </v-card-text>
+          </v-card>
+        </v-timeline-item>
+      </v-timeline>
+    </v-container>
+
+    <v-container>
+      <h4 class="heading text-uppercase">ОБИРАЮЧИ НАС ВИ ОТРИМУЄТЕ:</h4>
+      <v-timeline dense>
+        <v-timeline-item>
+          <v-card class="elevation-1">
+
+            <v-card-text class="subtitle-2 text-uppercase">
+              доступні ціни;
+            </v-card-text>
+          </v-card>
+        </v-timeline-item>
+      </v-timeline>
+      <v-timeline dense>
+        <v-timeline-item>
+          <v-card class="elevation-2">
+
+            <v-card-text class="subtitle-2 text-uppercase">
+              високу якість послуг та сервісу;
+            </v-card-text>
+          </v-card>
+        </v-timeline-item>
+      </v-timeline>
+      <v-timeline dense>
+        <v-timeline-item>
+          <v-card class="elevation-2">
+
+            <v-card-text class="subtitle-2 text-uppercase">
+              індивідуальний підхід до кожного клієнта;
+            </v-card-text>
+          </v-card>
+        </v-timeline-item>
+      </v-timeline>
+      <v-timeline dense>
+        <v-timeline-item>
+          <v-card class="elevation-2">
+
+            <v-card-text class="subtitle-2 text-uppercase">
+              високошвидкісний інтернет у Києві та не тільки;
+            </v-card-text>
+          </v-card>
+        </v-timeline-item>
+      </v-timeline>
+      <v-timeline dense>
+        <v-timeline-item>
+          <v-card class="elevation-2">
+
+            <v-card-text class="subtitle-2 text-uppercase">
+              швидку реакцію на Ваші звернення, заявки, пропозиції.
+            </v-card-text>
+          </v-card>
+        </v-timeline-item>
+      </v-timeline>
+
+    </v-container>
+
   </div>
 </template>
 
 
 <script>
-  export default {
-    data: () => ({
-      reverse: true,
-    }),
-  }
+export default {
+  data: () => ({
+    reverse: true,
+  }),
+}
 </script>
 
 
 <style scoped>
+
 .heading {
   font-size: 2rem;
   -webkit-font-smoothing: antialiased;

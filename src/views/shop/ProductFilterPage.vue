@@ -6,7 +6,7 @@
               <v-tab-item>
                 <v-container fluid>
                   <v-row >
-                    <v-col  v-for="product in PRODUCTS" :key="product.id" class="mx-auto" max-width="250" cols="12" sm="6">
+                    <v-col  v-for="product in PRODUCTS" :key="product.id" class="mx-auto" max-width="250" cols="12" sm="4">
                       <v-card v-if="product.group == 4">
                         <v-card-text>
                           <div class="font-weight-light subtitle-1  text-right ">Ціна: <span
@@ -23,7 +23,7 @@
                          <ProductDetailPage v-show="clickedProduct === product.id" v-bind:product="product"></ProductDetailPage>
                         <v-card-actions>
                           <v-spacer></v-spacer>
-                              <v-btn small replace class="primary"  @click="clickedProduct = product.id">
+                              <v-btn small replace class="indigo" style="color:white;"  @click="clickedProduct = product.id">
                                 Детально
                                 <v-icon>
                                   mdi-chevron-double-right

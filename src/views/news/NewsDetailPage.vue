@@ -17,9 +17,4 @@ export default {
 }
 </script>
 
-<style scoped>
-.main{
-  border: 1px solid steelblue;
-  border-radius: 10px;
-}
-</style>
+

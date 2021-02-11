@@ -61,10 +61,31 @@
             <v-icon aria-hidden="false">mdi-check</v-icon>
             Домофон
           </v-list-item>
-          <v-list-item href="/news">
-            <v-icon aria-hidden="false">mdi-check</v-icon>
-            Новини
-          </v-list-item>
+ <v-divider></v-divider>
+            <v-list-group :value="false" no-action sub-group>
+            <template v-slot:activator>
+              <v-list-item-content>
+                <v-list-item-title>Компанія</v-list-item-title>
+              </v-list-item-content>
+            </template>
+            <v-list-item href="/news">
+              <v-icon aria-hidden="false">mdi-check</v-icon>
+              Новини
+            </v-list-item>
+            <v-list-item href="/docs">
+              <v-icon aria-hidden="false">mdi-check</v-icon>
+              Документи
+            </v-list-item>
+            <v-list-item href="/partners">
+              <v-icon aria-hidden="false">mdi-check</v-icon>
+              Партнери
+            </v-list-item>
+            <v-list-item href="/about">
+              <v-icon aria-hidden="false">mdi-check</v-icon>
+              Про компанію
+            </v-list-item>
+          </v-list-group>
+
           <v-divider></v-divider>
           <v-list-group :value="true" no-action sub-group>
             <template v-slot:activator>

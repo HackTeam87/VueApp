@@ -66,8 +66,8 @@ export default {
 /* This is for documentation purposes and will not be needed in your application */
 #create .v-speed-dial {
   position: fixed;
-  top: 80px;
-  right: 40px;
+  top: 72px;
+  right: 32px;
   z-index: 999;
 }
 
