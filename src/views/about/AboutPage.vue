@@ -2,17 +2,17 @@
   <div class="main">
     <h1 class="heading">Про компанію</h1>
     <v-container>
-      <v-row class="mb-6" no-gutters>
-        <v-col sm6>
+      <v-row  >
+        <v-col sm7>
 
           <v-img
-              max-height="840"
-              max-width="600"
-              src="@/assets/img/about/meeting.webp"
+              height="98%"
+              width="100%"
+              src="@/assets/img/about/team.webp"
           ></v-img>
 
         </v-col>
-        <v-col sm6>
+        <v-col sm5>
           <v-list>
             <v-list-item>
               <p class="text-sm-left subtitle-1">

@@ -29,15 +29,15 @@
       <v-layout row wrap>
 
         <v-flex d-flex sm4>
-          <v-card href="/internet/price/daniya" hover data-aos="zoom-in" data-aos-easing="ease" >
+          <v-card href="/internet/price/daniya" hover data-aos="zoom-in" data-aos-easing="ease">
 
-              <v-card-title class="text-right">Жк Данія</v-card-title>
-              <v-img class="white--text align-end" height="150px"
-                     src="@/assets/img/internet_price/daniya.webp">
-              </v-img>
-              <v-card-text>
-                <v-icon aria-hidden="false">mdi-server-network</v-icon>
-              </v-card-text>
+            <v-card-title class="text-right">Жк Данія</v-card-title>
+            <v-img class="white--text align-end" height="150px"
+                   src="@/assets/img/internet_price/daniya.webp">
+            </v-img>
+            <v-card-text>
+              <v-icon aria-hidden="false">mdi-server-network</v-icon>
+            </v-card-text>
 
 
           </v-card>
@@ -45,27 +45,27 @@
         <v-flex d-flex sm4>
           <v-card href="/internet/price/eurocity" hover data-aos="zoom-in" data-aos-easing="ease">
 
-              <v-card-title class="text-right">Жк Евромісто</v-card-title>
-              <v-img class="white--text align-end" height="150px"
-                     src="@/assets/img/internet_price/eurocity.webp">
-              </v-img>
+            <v-card-title class="text-right">Жк Евромісто</v-card-title>
+            <v-img class="white--text align-end" height="150px"
+                   src="@/assets/img/internet_price/eurocity.webp">
+            </v-img>
 
-              <v-card-text>
-                <v-icon aria-hidden="false">mdi-server-network</v-icon>
-              </v-card-text>
+            <v-card-text>
+              <v-icon aria-hidden="false">mdi-server-network</v-icon>
+            </v-card-text>
 
           </v-card>
         </v-flex>
         <v-flex d-flex sm4>
           <v-card href="/internet/price/promenada" hover data-aos="zoom-in" data-aos-easing="ease">
 
-              <v-card-title class="text-right">Жк Променада</v-card-title>
-              <v-img class="white--text align-end" height="150px"
-                     src="@/assets/img/internet_price/promenada.webp">
-              </v-img>
-              <v-card-text>
-                <v-icon aria-hidden="false">mdi-server-network</v-icon>
-              </v-card-text>
+            <v-card-title class="text-right">Жк Променада</v-card-title>
+            <v-img class="white--text align-end" height="150px"
+                   src="@/assets/img/internet_price/promenada.webp">
+            </v-img>
+            <v-card-text>
+              <v-icon aria-hidden="false">mdi-server-network</v-icon>
+            </v-card-text>
 
           </v-card>
         </v-flex>
@@ -77,8 +77,8 @@
     <v-container>
       <v-row>
 
-        <v-col cols="12" sm="6" >
-          <div class="services_price" >
+        <v-col cols="12" sm="6">
+          <div class="services_price">
             <v-card class="services__item" max-width="100%" outlined hover data-aos="zoom-in" data-aos-easing="ease">
               <v-list-item three-line>
                 <v-list-item-content>
@@ -187,7 +187,8 @@
         </v-col>
         <v-col cols="12" sm="6">
           <div class="services_price">
-            <v-card class="mx-auto services__item" max-width="100%" outlined hover data-aos="zoom-in" data-aos-easing="ease">
+            <v-card class="mx-auto services__item" max-width="100%" outlined hover data-aos="zoom-in"
+                    data-aos-easing="ease">
               <v-list-item three-line>
                 <v-list-item-content>
                   <div class="overline mb-4">
@@ -321,6 +322,7 @@
         </v-col>
 
       </v-row>
+
     </v-container>
   </div>
 </template>
@@ -331,12 +333,24 @@ export default {
 
   data() {
     return {
+      fab: false,
       slides: [
+        {link: 'https://mag.golden.net.ua/static/img/sliders/friends.webp'},
         {link: 'https://mag.golden.net.ua/static/img/sliders/new_year_box.webp'},
         {link: 'https://mag.golden.net.ua/static/img/sliders/new_year_box1.webp'}
       ],
     }
   },
+  methods: {
+    onScroll(e) {
+      if (typeof window === 'undefined') return
+      const top = window.pageYOffset || e.target.scrollTop || 0
+      this.fab = top > 20
+    },
+    toTop() {
+      this.$vuetify.goTo(0)
+    }
+  }
 }
 </script>
 

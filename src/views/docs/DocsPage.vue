@@ -29,7 +29,7 @@
           <v-card  hover data-aos="zoom-in" data-aos-easing="ease"  @click="readFileInternetI()">
               <v-card-title class="font-weight-medium  headline">Договір  фізичним  особам <br> домофон</v-card-title>
               <v-img class="white--text align-end" height="150px"
-                     src="@/assets/docs/images/private.webp">
+                     src="@/assets/docs/images/intercom.webp">
               </v-img>
               <v-card-text>
                 <v-icon aria-hidden="false">mdi-chevron-double-down</v-icon>

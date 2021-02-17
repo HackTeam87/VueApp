@@ -2,6 +2,10 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 import MainPage from '../views/MainPage';
 import MainSecurityPage from '../views/security/MainSecurityPage';
+import AccessControlPage from '../views/security/access-control/AccessControlPage';
+import AlarmSecurityPage from '../views/security/alarm-security/AlarmSecurityPage';
+import VideoSurveillancePage from '../views/security/video-surveillance/VideoSurveillancePage';
+import OmoPage from '../views/iot/OmoPage';
 import VInternetMainPage from '../views/VInternetMainPage';
 import InternetMainPage from '../views/InternetMainPage';
 import InternetPricePage from '../views/internet/InternetPricePage';
@@ -14,6 +18,7 @@ import AboutPage from '../views/about/AboutPage';
 import DocsPage from '../views/docs/DocsPage';
 import NewsPage from '../views/news/NewsPage';
 import NewsDetailPage from '../views/news/NewsDetailPage';
+import PartnersPage from '../views/partners/PartnersPage';
 import ManualPage from '../views/manual/ManualPage';
 import ContactsPage from '../views/contacts/ContactsPage';
 
@@ -29,6 +34,26 @@ const routes = [
         name: 'MainSecurity',
         path: '/main/security',
         component: MainSecurityPage
+    },
+    {
+        name: 'AccessControlPage',
+        path: '/main/security/access/control',
+        component: AccessControlPage
+    },
+    {
+        name: 'AlarmSecurityPage',
+        path: '/main/security/alarm/security',
+        component: AlarmSecurityPage
+    },
+    {
+        name: 'VideoSurveillancePage',
+        path: '/main/security/video/surveillance',
+        component: VideoSurveillancePage
+    },
+     {
+        name: 'OmoPage',
+        path: '/iot',
+        component: OmoPage
     },
     {
         name: 'ManualPage',
@@ -99,6 +124,11 @@ const routes = [
         name: 'Docs',
         path: '/docs',
         component:DocsPage
+    },
+    {
+        name: 'Partners',
+        path: '/partners',
+        component:PartnersPage
     }
    
 ];

@@ -93,15 +93,15 @@
                 <v-list-item-title>Безпека</v-list-item-title>
               </v-list-item-content>
             </template>
-            <v-list-item href="/main/video">
+            <v-list-item href="/main/security/video/surveillance">
               <v-icon aria-hidden="false">mdi-check</v-icon>
               Відеоспостереження
             </v-list-item>
-            <v-list-item href="/main/security">
+            <v-list-item href="/main/security/access/control">
               <v-icon aria-hidden="false">mdi-check</v-icon>
               Контроль Доступу
             </v-list-item>
-            <v-list-item href="/main/alert">
+            <v-list-item href="/main/security/alarm/security">
               <v-icon aria-hidden="false">mdi-check</v-icon>
               Охоронна Сигналізація
             </v-list-item>
