@@ -6,29 +6,36 @@
     <h1 class="heading">Новини</h1>
     <v-container grid-list-md>
       <v-layout row wrap v-for="post in NEWS" v-bind:key="post.id">
-        <v-flex d-flex sm8 offset-sm-2>
+        <v-flex d-flex xs12 sm12 md12 offset-sm-2>
 
           <v-card class="my-3" hover data-aos="zoom-in" data-aos-easing="ease">
 
-            <h3 class="headline mb-0 text-center indigo" style="color:#ffffff;"  > {{ post.title }}</h3>
+            <h3 class="headline mb-0 text-center" style="color:#ffffff;background-color:#002244"  > {{ post.title }}</h3>
+            <v-divider></v-divider>
 
             <v-img v-bind:src="post.img" aspect-ratio="2.75"></v-img>
 
             <v-card-title primary-title>
 
-              <div> {{ post.short_text }}</div>
+              <div>
+                <p class="Heading 4 text-left" v-html='post.short_text'></p>
+              </div>
 
             </v-card-title>
-             <NewsDetailPage v-show="clickedPost === post.id" v-bind:post="post"></NewsDetailPage>
+
+
+               <NewsDetailPage v-show="clickedPost === post.id" v-bind:post="post"></NewsDetailPage>
+
+
 
             <v-card-actions>
-              <v-btn icon class="red--text">
+              <v-btn icon class="red--text" href="https://www.facebook.com/groups/355212401778903">
                 <v-icon small>mdi-facebook</v-icon>
               </v-btn>
 
               <v-spacer></v-spacer>
 
-              <v-btn small replace class="indigo" style="color:white;" @click="clickedPost = post.id">
+              <v-btn small replace  style="color:#ffffff;background-color:#002244" @click="clickedPost = post.id">
                 Детально
                 <v-icon>
                   mdi-chevron-double-right
@@ -86,14 +93,7 @@ export default {
 
 <style scoped>
 .heading {
-  font-size: 2rem;
-  -webkit-font-smoothing: antialiased;
-  letter-spacing: .2rem;
-  text-align: center;
-  /*color: #002244;*/
   color:#ffffff;
-  /*text-shadow: 0 3px 0 #fec422;*/
   text-shadow: 0 3px 0 #002244;
-  margin-bottom: 30px;
 }
 </style>

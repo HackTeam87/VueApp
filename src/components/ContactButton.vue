@@ -22,12 +22,15 @@
       <v-btn fab dark small color="light-blue accent-3" :href="'https://t.me/GoldenNetUaBot'">
         <v-icon> mdi-telegram</v-icon>
       </v-btn>
-      <v-btn fab dark small color="red">
+      <v-btn fab dark small color="red" @click="dialog = true">
         <v-icon>mdi-phone-incoming</v-icon>
       </v-btn>
     </v-speed-dial>
   </v-card>
+
 </template>
+
+
 
 <script>
 export default {

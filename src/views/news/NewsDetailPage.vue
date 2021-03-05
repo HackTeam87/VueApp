@@ -1,8 +1,9 @@
 <template>
-  <div class="main">
-    <v-list>
-      <v-list-item >{{ post.text }}</v-list-item>
-    </v-list>
+  <div>
+<v-card-text>
+        <p class="text-left" v-html='post.text'></p>
+  <a href=""></a>
+</v-card-text>
   </div>
 </template>
 

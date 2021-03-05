@@ -238,14 +238,3 @@ export default {
   },
 }
 </script>
-
-<style scoped>
-.heading {
-  font-size: 2rem;
-  -webkit-font-smoothing: antialiased;
-  letter-spacing: .2rem;
-  text-align: center;
-  color: #002244;
-  text-shadow: 0 3px 0 #fec422;
-}
-</style>

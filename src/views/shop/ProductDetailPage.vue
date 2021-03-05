@@ -1,8 +1,8 @@
 <template>
   <div>
-     <v-list>
-      <v-list-item >{{product.description}}</v-list-item>
-    </v-list>
+     <p class="text-left">
+       {{product.description}}
+     </p>
   </div>
 </template>
 

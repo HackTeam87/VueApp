@@ -304,21 +304,6 @@ export default {
 </script>
 
 <style scoped>
-
-
-.heading {
-  /*font-family: Rochester;*/
-  font-size: 2rem;
-  -webkit-font-smoothing: antialiased;
-  letter-spacing: .01rem;
-  text-align: center;
-  /*color: #ffffff;*/
-  color: #002244;
-  /*text-shadow: 0 3px 0 #37718E #FFC107;*/
-  text-shadow: 0 3px 0 #fec422;
-}
-
-
 .services_price {
   display: grid;
   grid-template-columns: 1fr;
@@ -345,8 +330,6 @@ export default {
 
 .activate {
   color: #ffffff;
-  /*background-color: #ff4500;*/
-  /*background-color: #fec422;*/
   background-color: #002244;
 }
 
@@ -363,7 +346,6 @@ export default {
 }
 
 .total span {
-  /*color: #ffffff;*/
   color: #002244;
   font-size: 1.6rem;
 }
@@ -371,12 +353,9 @@ export default {
 .services_description li {
   font-size: 1.1em;
   list-style: none;
-  /*color: #ffffff;*/
 }
 
 .bl {
   color: #00387f;
 }
-
-
 </style>

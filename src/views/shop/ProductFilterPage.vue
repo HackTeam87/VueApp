@@ -140,7 +140,6 @@
   </div>
 </template>
 
-
 <script>
 import ProductDetailPage from '@/views/shop/ProductDetailPage.vue'
 import {mapActions, mapGetters} from 'vuex'
@@ -175,15 +174,3 @@ export default {
   }
 }
 </script>
-<style scoped>
-.v-card--reveal {
-  bottom: 0;
-  opacity: 1 !important;
-  position: absolute;
-  width: 100%;
-}
-
-.vv {
-  height: 100%;
-}
-</style>

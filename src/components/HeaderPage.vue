@@ -1,6 +1,7 @@
 <template>
   <nav>
-    <v-navigation-drawer temporary app v-model="drawer" width="100%" v-scroll.self="onScroll" class="overflow-y-auto"
+    <v-navigation-drawer temporary app v-model="drawer" width="100%" v-scroll.self="onScroll"
+                         class="nav-line overflow-y-auto"
                          max-height="100%">
       <v-container class="">
         <v-spacer></v-spacer>
@@ -42,16 +43,7 @@
 
         <v-divider></v-divider>
 
-        <v-list>
-          <v-list-item v-for="(item, i) in menuItems" :key="`navdrawer${i}`" :to="item.route">
-            <v-list-item-action>
-              <v-icon aria-hidden="false" left v-html="item.icon"></v-icon>
-            </v-list-item-action>
-            <v-list-item-content>
-              <v-list-item-title v-text="item.title"></v-list-item-title>
-            </v-list-item-content>
-          </v-list-item>
-        </v-list>
+
         <v-list>
           <v-list-item href="/internet">
             <v-icon aria-hidden="false">mdi-check</v-icon>
@@ -61,8 +53,8 @@
             <v-icon aria-hidden="false">mdi-check</v-icon>
             Домофон
           </v-list-item>
- <v-divider></v-divider>
-            <v-list-group :value="false" no-action sub-group>
+          <v-divider></v-divider>
+          <v-list-group :value="false" no-action sub-group>
             <template v-slot:activator>
               <v-list-item-content>
                 <v-list-item-title>Компанія</v-list-item-title>
@@ -111,7 +103,7 @@
             <v-icon aria-hidden="false">mdi-check</v-icon>
             Розумний Дім
           </v-list-item>
-           <v-list-item href="/shop">
+          <v-list-item href="/shop">
             <v-icon aria-hidden="false">mdi-check</v-icon>
             Магазин
           </v-list-item>
@@ -125,14 +117,14 @@
         <v-divider></v-divider>
 
         <v-card-text class="black--text">
-          2018 - {{ new Date().getFullYear() }} <strong>GoldeNNet  <span>© All rights reserved</span> </strong>
+          2018 - {{ new Date().getFullYear() }} <strong>GoldeNNet <span>© All rights reserved</span> </strong>
         </v-card-text>
       </v-container>
 
     </v-navigation-drawer>
 
 
-    <v-app-bar relative app dark color="#002244">
+    <v-app-bar relative app dark color="#002244" class="nav-line">
 
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" class="hidden-md-and-up"></v-app-bar-nav-icon>
 
@@ -147,10 +139,10 @@
         </v-toolbar-title>
       </router-link>
 
-      <v-col class="d-flex" cols="12" sm="6">
-        <v-menu transition="fab-transition" bottom right>
+      <v-col class="d-flex" cols="12" sm="4">
+        <v-menu transition="fab-transition" bottom right >
           <template v-slot:activator="{ on, attrs }">
-            <v-btn color="#002244" elevation="0" v-bind="attrs" v-on="on">
+            <v-btn  color="#002244" elevation="0" v-bind="attrs" v-on="on">
               <v-icon aria-hidden="false">mdi-chevron-double-down</v-icon>
               +38(097) 354 4545
             </v-btn>
@@ -166,11 +158,16 @@
       </v-col>
 
       <v-spacer></v-spacer>
+
+      <v-btn class="nav-line" color="#002244" elevation="0">
+        {{ timestamp }}
+      </v-btn>
+
       <v-toolbar-items class="hidden-sm-and-down">
 
         <v-menu transition="fab-transition" bottom right>
           <template v-slot:activator="{ on, attrs }">
-            <v-btn color="#002244" elevation="0" v-bind="attrs" v-on="on">
+            <v-btn class="nav-line" color="#002244" elevation="0" v-bind="attrs" v-on="on">
               <v-icon aria-hidden="false">mdi-chevron-double-down</v-icon>
               Про Компанію
             </v-btn>
@@ -184,23 +181,18 @@
         </v-menu>
 
 
-        <v-btn href="https://my.golden.net.ua" target="_blank" color="#002244" elevation="0">
+        <v-btn class="nav-line" href="https://my.golden.net.ua" target="_blank" color="#002244" elevation="0">
           <v-icon aria-hidden="false">mdi-account</v-icon>
           Профіль
         </v-btn>
-        <v-btn href="https://test.golden.net.ua" target="_blank" color="#002244" elevation="0">
+        <v-btn class="nav-line" href="https://test.golden.net.ua" target="_blank" color="#002244" elevation="0">
           <v-icon aria-hidden="false">mdi-access-point-network</v-icon>
           Speedtest
         </v-btn>
 
-        <v-btn v-for="(item, i) in menuItems" :key="`menuitem${i}`" :to="item.route" color="#002244" elevation="0">
-          <v-icon aria-hidden="false" left v-html="item.icon"></v-icon>
-          {{ item.title }}
-        </v-btn>
-
       </v-toolbar-items>
-    </v-app-bar>
 
+    </v-app-bar>
 
   </nav>
 
@@ -211,6 +203,7 @@
 export default ({
   data() {
     return {
+      timestamp: '',
       scrollInvoked: 0,
       contacts: [
         {title: '+38(097) 354 4545', link: '0973544545'},
@@ -226,24 +219,26 @@ export default ({
       drawer: false
     }
   },
+  created() {
+    setInterval(this.getNow, 1000);
+  },
   methods: {
     onScroll() {
       this.scrollInvoked++
     },
-  },
-  computed: {
-    menuItems() {
-      return [
-
-        // {
-        //   icon: 'mdi-home-automation  large',
-        //   title: '',
-        //   route: '/'
-        // },
-
-      ]
+    getNow: function () {
+      let result
+      const today = new Date();
+      // const date = today.getDate() + '-' + (today.getMonth() + 1) + '-' +  today.getFullYear();
+      const time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+      if (today.getHours() >= 8 && today.getHours() < 21) {
+        result = 'work time : ' + time
+      } else if (today.getHours()) {
+        result = 'not working hours : ' + time + ' '
+      }
+      this.timestamp = result;
     }
-  }
+  },
 })
 
 </script>

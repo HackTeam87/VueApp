@@ -1,11 +1,8 @@
 <template>
-  <v-footer dark padless class=" lighten-1 white--text text-center" color="#002244">
-
-
+  <v-footer dark padless class="lighten-1 white--text text-center" color="#002244">
     <v-container grid-list-md>
-
       <v-layout row wrap>
-        <v-flex d-flex sm3>
+        <v-flex d-flex sm3 >
           <v-card flat tile>
             <v-list v-for="(i ,index) in contacts" :key="index" class=" lighten-1 white--text text-center"
                     color="#002244">
@@ -21,9 +18,7 @@
             </v-list>
           </v-card>
         </v-flex>
-
-
-        <v-flex d-flex sm3>
+        <v-flex d-flex sm3 >
           <v-card flat tile>
             <v-list v-for="(i,index) in FooterLinkGroup1" :key="index" class=" lighten-1 white--text text-center"
                     color="#002244">
@@ -36,7 +31,7 @@
             </v-list>
           </v-card>
         </v-flex>
-        <v-flex d-flex sm3>
+        <v-flex d-flex sm3 >
           <v-card flat tile>
             <v-list v-for="(i,index) in FooterLinkGroup2" :key="index" class=" lighten-1 white--text text-center"
                     color="#002244">
@@ -49,7 +44,7 @@
             </v-list>
           </v-card>
         </v-flex>
-        <v-flex d-flex sm3>
+        <v-flex d-flex sm3 >
           <v-card flat tile>
             <v-list v-for="(i,index) in FooterLinkGroup3" :key="index" class=" lighten-1 white--text text-center"
                     color="#002244">
@@ -62,70 +57,19 @@
             </v-list>
           </v-card>
         </v-flex>
-
       </v-layout>
-
-      <v-btn block color="error" class="py-sm-5 title rounded-xl" @click="dialog = true">
-        Підключитись
-      </v-btn>
-
-      <v-dialog v-model="dialog" fullscreen hide-overlay transition="dialog-bottom-transition">
-        <v-card>
-          <v-toolbar dark color="#002244">
-            <v-btn icon dark @click="dialog = false">
-              <v-icon>mdi-close</v-icon>
-            </v-btn>
-            <v-spacer></v-spacer>
-            <v-toolbar-items>
-
-            </v-toolbar-items>
-          </v-toolbar>
-
-          <v-container>
-            <v-subheader class="headline">Підключайся</v-subheader>
-            <v-form ref="form" lazy-validation>
-              <v-text-field :counter="20" label="Ім'я" required></v-text-field>
-              <v-text-field :counter="20" label="Прізвище"></v-text-field>
-              <v-text-field :counter="20" label="Телефон" required></v-text-field>
-
-
-              <v-btn block color="error" class="py-sm-5 title rounded-xl">
-                Надіслати
-              </v-btn>
-
-            </v-form>
-          </v-container>
-        </v-card>
-
-
-      </v-dialog>
-
-
     </v-container>
-
-    <v-container fluid grid-list-md>
-      <v-divider></v-divider>
-      <v-layout row wrap>
-        <v-card-text class="white--text">
-          2018 - {{ new Date().getFullYear() }} <strong>GoldeNNet <span>© All rights reserved</span></strong>
-          <v-btn v-for="(icon,index) in social" :key="index" class="mx-4 white--text" icon :href="icon.link"
-                 target="_blank">
-            <v-icon size="24px">
-              {{ icon.title }}
-            </v-icon>
-          </v-btn>
-        </v-card-text>
-      </v-layout>
+    <v-container fluid white>
+      <send-form></send-form>
     </v-container>
   </v-footer>
 </template>
 
 <script>
+import SendForm from '@/components/SendForm.vue'
+
 export default {
-
-
   data: () => ({
-    dialog: false,
     social: [
       {title: 'mdi-facebook', link: 'https://www.facebook.com/golden.net.ua/'},
     ],
@@ -150,6 +94,9 @@ export default {
       {title: '+38(093) 354 4545', link: '0933544545'},
     ]
   }),
+  components: {
+    SendForm
+  },
 
 }
 </script>

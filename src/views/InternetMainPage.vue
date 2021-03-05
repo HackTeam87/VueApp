@@ -337,40 +337,15 @@ export default {
       slides: [
         {link: 'https://mag.golden.net.ua/static/img/sliders/friends.webp'},
         {link: 'https://mag.golden.net.ua/static/img/sliders/new_year_box.webp'},
-        {link: 'https://mag.golden.net.ua/static/img/sliders/new_year_box1.webp'}
+        // {link: 'https://mag.golden.net.ua/static/img/sliders/new_year_box1.webp'}
       ],
     }
   },
-  methods: {
-    onScroll(e) {
-      if (typeof window === 'undefined') return
-      const top = window.pageYOffset || e.target.scrollTop || 0
-      this.fab = top > 20
-    },
-    toTop() {
-      this.$vuetify.goTo(0)
-    }
-  }
 }
 </script>
 
 <style scoped>
-a {
-  text-decoration: none;
-}
-
-.heading {
-  font-size: 2rem;
-  -webkit-font-smoothing: antialiased;
-  letter-spacing: .01rem;
-  text-align: center;
-  color: #002244;
-  text-shadow: 0 3px 0 #fec422;
-}
-
 .services__item {
-  /*box-shadow: 0 3px 3px 0 #37718E;*/
   box-shadow: 0 1px 1px 0 #fec422;
 }
-
 </style>
