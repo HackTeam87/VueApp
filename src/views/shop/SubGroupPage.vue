@@ -4,14 +4,18 @@
         <v-container grid-list-md>
             <v-layout row wrap justify-center>
 
-                <v-flex d-flex  sm4 v-for="(i,index) in Sub" :key="index" >
-                    <v-card hover data-aos="zoom-in" data-aos-easing="ease"  @click="Product(i.id)">
+                <v-flex d-flex sm4 v-for="(i,index) in Sub" :key="index">
+                    <v-card hover data-aos="zoom-in" data-aos-easing="ease" @click="Product(i.id)">
 
-                        <v-card-title class="font-weight-medium headline" >
-                            {{i.tag}}</v-card-title>
-                        <v-img class="white--text align-end" height="150px"
-                              src="@/assets/img/logo.webp">
+
+                        <v-img class="white--text align-end" height="195px"
+                               :src="i.img">
                         </v-img>
+                        <v-card-title class="font-weight-medium headline">
+                            <v-spacer/>
+                            {{i.tag}}
+                            <v-spacer/>
+                        </v-card-title>
 
                         <v-card-text>
                             <v-icon aria-hidden="false">mdi-chevron-double-down</v-icon>
@@ -52,8 +56,8 @@
                 this.Sub = Children
             },
 
-            Product(id){
-                 this.$router.push({ name: 'ProductPage', query: { id: id } })
+            Product(id) {
+                this.$router.push({name: 'ProductPage', query: {id: id}})
             }
         }
 

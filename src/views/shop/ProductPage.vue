@@ -18,17 +18,18 @@
                                     <v-img class="white--text align-end" height="280px" v-bind:src="p.img"></v-img>
 
                                     <div class="text--primary">
-                                        <p>
+                                        <p class="text-left">
                                             {{ p.short_description }}
                                         </p>
                                     </div>
+                                     <ProductDetailPage v-show="clickedProduct === p.id"
+                                                   v-bind:product="p"/>
                                 </v-card-text>
-                                <ProductDetailPage v-show="clickedProduct === p.id"
-                                                   v-bind:product="p"></ProductDetailPage>
+
                                 <v-card-actions>
                                     <v-spacer></v-spacer>
                                     <v-btn small replace class="indigo" style="color:white;"
-                                           @click="clickedProduct = p.id">
+                                           @click="clickedProduct = p.id" v-show="clickedProduct !== p.id">
                                         Детально
                                         <v-icon>
                                             mdi-chevron-double-right

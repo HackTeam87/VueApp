@@ -23,7 +23,7 @@
                             </v-card-text>
 
 
-                            <NewsDetailPage v-show="clickedPost === post.id" v-bind:post="post"></NewsDetailPage>
+                            <NewsDetailPage v-show="clickedPost === post.id" :post="post"/>
 
 
                             <v-card-actions>
@@ -34,7 +34,7 @@
                                 <v-spacer></v-spacer>
 
                                 <v-btn small replace style="color:#ffffff;background-color:#002244"
-                                       @click="clickedPost = post.id">
+                                       @click="clickedPost = post.id" v-show="clickedPost !== post.id">
                                     Детально
                                     <v-icon>
                                         mdi-chevron-double-right
