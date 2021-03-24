@@ -76,7 +76,7 @@ export default {}
 .pricingTable:hover:after {
   opacity: 1;
   transform: rotateY(0deg);
-  border: solid 2px #fec422;
+  border: solid 1px #fec422;
 }
 
 .pricingTable .icon {

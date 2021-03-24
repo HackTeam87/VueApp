@@ -75,7 +75,7 @@
           </v-card>
         </v-flex>
         <v-flex d-flex sm4>
-          <v-card hover data-aos="zoom-in" data-aos-easing="ease" href="/shop">
+          <v-card hover data-aos="zoom-in" data-aos-easing="ease" href="/shop/group">
 
             <v-card-title class="font-weight-medium headline">Магазин</v-card-title>
             <v-img class="white--text align-end" height="150px"

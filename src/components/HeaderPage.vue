@@ -103,7 +103,7 @@
             <v-icon aria-hidden="false">mdi-check</v-icon>
             Розумний Дім
           </v-list-item>
-          <v-list-item href="/shop">
+          <v-list-item href="/shop/group">
             <v-icon aria-hidden="false">mdi-check</v-icon>
             Магазин
           </v-list-item>
@@ -139,10 +139,10 @@
         </v-toolbar-title>
       </router-link>
 
-      <v-col class="d-flex" cols="12" sm="4">
-        <v-menu transition="fab-transition" bottom right >
+      <v-col class="d-flex" cols="12" sm="3">
+        <v-menu transition="fab-transition" bottom right>
           <template v-slot:activator="{ on, attrs }">
-            <v-btn  color="#002244" elevation="0" v-bind="attrs" v-on="on">
+            <v-btn color="#002244" elevation="0" v-bind="attrs" v-on="on">
               <v-icon aria-hidden="false">mdi-chevron-double-down</v-icon>
               +38(097) 354 4545
             </v-btn>
@@ -156,6 +156,12 @@
           </v-list>
         </v-menu>
       </v-col>
+
+      <v-col class="d-flex" cols="12" sm="2" style="letter-spacing: 3.5px;color:#fec422;">
+          <v-icon  outlined >mdi-beta</v-icon>
+          eta version
+      </v-col>
+
 
       <v-spacer></v-spacer>
 
@@ -233,7 +239,7 @@ export default ({
       const time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
       if (today.getHours() >= 8 && today.getHours() < 21) {
         result = 'work time : ' + time
-      } else if (today.getHours()) {
+      } else {
         result = 'not working hours : ' + time + ' '
       }
       this.timestamp = result;

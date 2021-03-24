@@ -25,53 +25,98 @@
       </v-carousel>
     </v-container>
     <h1 class="heading">Інтернет + IPTV</h1>
-    <v-container grid-list-md>
-      <v-layout row wrap>
-
-        <v-flex d-flex sm4>
-          <v-card href="/internet/price/daniya" hover data-aos="zoom-in" data-aos-easing="ease">
-
-            <v-card-title class="text-right">Жк Данія</v-card-title>
-            <v-img class="white--text align-end" height="150px"
-                   src="@/assets/img/internet_price/daniya.webp">
-            </v-img>
-            <v-card-text>
-              <v-icon aria-hidden="false">mdi-server-network</v-icon>
-            </v-card-text>
 
 
+    <v-tabs v-model="tab" centered icons-and-text outlined>
+      <v-tabs-slider color="#fec422"></v-tabs-slider>
+
+      <v-tab href="#tab-1">
+        Інтернет приватиним абонентам
+        <v-icon>mdi-information-variant</v-icon>
+      </v-tab>
+
+      <v-tab href="#tab-2">
+        Інтернет бізнес абонентам
+        <v-icon>mdi-information-variant</v-icon>
+      </v-tab>
+    </v-tabs>
+
+    <v-tabs-items v-model="tab">
+      <v-tab-item value="tab-1">
+        <v-container grid-list-md>
+          <v-layout row wrap>
+
+            <v-flex d-flex sm4>
+              <v-card href="/internet/price/daniya" hover data-aos="zoom-in" data-aos-easing="ease">
+
+                <v-card-title class="text-right">Жк Данія</v-card-title>
+                <v-img class="white--text align-end" height="150px"
+                       src="@/assets/img/internet_price/daniya.webp">
+                </v-img>
+                <v-card-text>
+                  <v-icon aria-hidden="false">mdi-server-network</v-icon>
+                </v-card-text>
+
+
+              </v-card>
+            </v-flex>
+            <v-flex d-flex sm4>
+              <v-card href="/internet/price/eurocity" hover data-aos="zoom-in" data-aos-easing="ease">
+
+                <v-card-title class="text-right">Жк Евромісто</v-card-title>
+                <v-img class="white--text align-end" height="150px"
+                       src="@/assets/img/internet_price/eurocity.webp">
+                </v-img>
+
+                <v-card-text>
+                  <v-icon aria-hidden="false">mdi-server-network</v-icon>
+                </v-card-text>
+
+              </v-card>
+            </v-flex>
+            <v-flex d-flex sm4>
+              <v-card href="/internet/price/promenada" hover data-aos="zoom-in" data-aos-easing="ease">
+
+                <v-card-title class="text-right">Жк Променада</v-card-title>
+                <v-img class="white--text align-end" height="150px"
+                       src="@/assets/img/internet_price/promenada.webp">
+                </v-img>
+                <v-card-text>
+                  <v-icon aria-hidden="false">mdi-server-network</v-icon>
+                </v-card-text>
+
+              </v-card>
+            </v-flex>
+
+          </v-layout>
+        </v-container>
+      </v-tab-item>
+
+      <v-tab-item value="tab-2">
+        <v-container>
+          <v-card>
+            <v-data-table
+                mobile-breakpoint="0"
+                :headers="headers"
+                :items="tableData"
+                :items-per-page="5"
+                :hide-default-footer="true"
+            >
+              <template v-slot:body="{ items }">
+
+                <tbody>
+                <tr v-for="(item, index) in items" :key="index">
+                  <td class="text-left">{{ item.name }}</td>
+                  <td class="text-left">{{ item.price }}</td>
+                  <td class="text-left">{{ item.speed }}</td>
+                </tr>
+                </tbody>
+              </template>
+            </v-data-table>
           </v-card>
-        </v-flex>
-        <v-flex d-flex sm4>
-          <v-card href="/internet/price/eurocity" hover data-aos="zoom-in" data-aos-easing="ease">
-
-            <v-card-title class="text-right">Жк Евромісто</v-card-title>
-            <v-img class="white--text align-end" height="150px"
-                   src="@/assets/img/internet_price/eurocity.webp">
-            </v-img>
-
-            <v-card-text>
-              <v-icon aria-hidden="false">mdi-server-network</v-icon>
-            </v-card-text>
-
-          </v-card>
-        </v-flex>
-        <v-flex d-flex sm4>
-          <v-card href="/internet/price/promenada" hover data-aos="zoom-in" data-aos-easing="ease">
-
-            <v-card-title class="text-right">Жк Променада</v-card-title>
-            <v-img class="white--text align-end" height="150px"
-                   src="@/assets/img/internet_price/promenada.webp">
-            </v-img>
-            <v-card-text>
-              <v-icon aria-hidden="false">mdi-server-network</v-icon>
-            </v-card-text>
-
-          </v-card>
-        </v-flex>
-
-      </v-layout>
-    </v-container>
+        </v-container>
+      </v-tab-item>
+    </v-tabs-items>
 
     <h2 class="heading">Додаткові послуги</h2>
     <v-container>
@@ -79,7 +124,8 @@
 
         <v-col cols="12" sm="6">
           <div class="services_price">
-            <v-card class="services__item" max-width="100%" outlined hover data-aos="zoom-in" data-aos-easing="ease">
+            <v-card class="services__item" max-width="100%" outlined hover data-aos="zoom-in"
+                    data-aos-easing="ease">
               <v-list-item three-line>
                 <v-list-item-content>
                   <div class="overline mb-4">
@@ -112,7 +158,8 @@
         </v-col>
         <v-col cols="12" sm="6">
           <div class="services_price">
-            <v-card class="services__item" max-width="100%" outlined hover data-aos="zoom-in" data-aos-easing="ease">
+            <v-card class="services__item" max-width="100%" outlined hover data-aos="zoom-in"
+                    data-aos-easing="ease">
               <v-list-item three-line>
                 <v-list-item-content>
                   <div class="overline mb-4">
@@ -139,13 +186,15 @@
         </v-col>
         <v-col cols="12" sm="6">
           <div class="services_price">
-            <v-card class="services__item" max-width="100%" outlined hover data-aos="zoom-in" data-aos-easing="ease">
+            <v-card class="services__item" max-width="100%" outlined hover data-aos="zoom-in"
+                    data-aos-easing="ease">
               <v-list-item three-line>
                 <v-list-item-content>
                   <div class="overline mb-4">Goldennet</div>
                   <v-list-item-title class="subtitle-2 mb-1">Виклик фахівця</v-list-item-title>
                   <v-list-item-subtitle> * для огляду та консультації - 100 грн.</v-list-item-subtitle>
-                  <v-list-item-subtitle> * Терміновий виклик спеціаліста або термінове підключення - 100 грн. (протягом
+                  <v-list-item-subtitle> * Терміновий виклик спеціаліста або термінове підключення - 100 грн.
+                    (протягом
                     24-х годин)
                   </v-list-item-subtitle>
                 </v-list-item-content>
@@ -160,7 +209,8 @@
         </v-col>
         <v-col cols="12" sm="6">
           <div class="services_price">
-            <v-card class="services__item" max-width="100%" outlined hover data-aos="zoom-in" data-aos-easing="ease">
+            <v-card class="services__item" max-width="100%" outlined hover data-aos="zoom-in"
+                    data-aos-easing="ease">
               <v-list-item three-line>
                 <v-list-item-content>
                   <div class="overline mb-4">
@@ -172,7 +222,8 @@
                     Обладнання абонента - 100 грн.
                   </v-list-item-subtitle>
                   <v-list-item-subtitle>
-                    * Розширене налаштування програмного забезпечення SMART-TV або медіаплеєра: - Обладнання абонента -
+                    * Розширене налаштування програмного забезпечення SMART-TV або медіаплеєра: - Обладнання
+                    абонента -
                     200 грн.
                   </v-list-item-subtitle>
                 </v-list-item-content>
@@ -195,7 +246,8 @@
                     Goldennet
                   </div>
                   <v-list-item-title class="subtitle-2 mb-1">Обжим кабелю</v-list-item-title>
-                  <v-list-item-subtitle>* Додаткова заміна (обтиск) коннектора RJ-45 - 15 грн/шт.</v-list-item-subtitle>
+                  <v-list-item-subtitle>* Додаткова заміна (обтиск) коннектора RJ-45 - 15 грн/шт.
+                  </v-list-item-subtitle>
                 </v-list-item-content>
 
                 <v-list-item-avatar tile size="70">
@@ -210,7 +262,8 @@
 
         <v-col cols="12" sm="6">
           <div class="services_price">
-            <v-card class="services__item" max-width="100%" outlined hover data-aos="zoom-in" data-aos-easing="ease">
+            <v-card class="services__item" max-width="100%" outlined hover data-aos="zoom-in"
+                    data-aos-easing="ease">
               <v-list-item three-line>
                 <v-list-item-content>
                   <div class="overline mb-4">Goldennet</div>
@@ -232,7 +285,8 @@
         </v-col>
         <v-col cols="12" sm="6">
           <div class="services_price">
-            <v-card class="services__item" max-width="100%" outlined hover data-aos="zoom-in" data-aos-easing="ease">
+            <v-card class="services__item" max-width="100%" outlined hover data-aos="zoom-in"
+                    data-aos-easing="ease">
               <v-list-item three-line>
                 <v-list-item-content>
                   <div class="overline mb-4">
@@ -254,7 +308,8 @@
         </v-col>
         <v-col cols="12" sm="6">
           <div class="services_price">
-            <v-card class="services__item" max-width="100%" outlined hover data-aos="zoom-in" data-aos-easing="ease">
+            <v-card class="services__item" max-width="100%" outlined hover data-aos="zoom-in"
+                    data-aos-easing="ease">
               <v-list-item three-line>
                 <v-list-item-content>
                   <div class="overline mb-4">
@@ -276,7 +331,8 @@
         </v-col>
         <v-col cols="12" sm="6">
           <div class="services_price">
-            <v-card class="services__item" max-width="100%" outlined hover data-aos="zoom-in" data-aos-easing="ease">
+            <v-card class="services__item" max-width="100%" outlined hover data-aos="zoom-in"
+                    data-aos-easing="ease">
               <v-list-item three-line>
                 <v-list-item-content>
                   <div class="overline mb-4">
@@ -300,7 +356,8 @@
         </v-col>
         <v-col cols="12" sm="6">
           <div class="services_price">
-            <v-card class="services__item" max-width="100%" outlined hover data-aos="zoom-in" data-aos-easing="ease">
+            <v-card class="services__item" max-width="100%" outlined hover data-aos="zoom-in"
+                    data-aos-easing="ease">
               <v-list-item three-line>
                 <v-list-item-content>
                   <div class="overline mb-4">
@@ -309,7 +366,8 @@
                   <v-list-item-title class="subtitle-2 mb-1">
                     Патч-корд
                   </v-list-item-title>
-                  <v-list-item-subtitle>Додаткове виготовлення патч-корду, (до 5 м) - 50 грн/шт</v-list-item-subtitle>
+                  <v-list-item-subtitle>Додаткове виготовлення патч-корду, (до 5 м) - 50 грн/шт
+                  </v-list-item-subtitle>
                 </v-list-item-content>
 
                 <v-list-item-avatar tile size="70">
@@ -324,6 +382,8 @@
       </v-row>
 
     </v-container>
+
+
   </div>
 </template>
 
@@ -333,7 +393,18 @@ export default {
 
   data() {
     return {
+      headers: [
+        {text: 'Тариф', value: 'name'},
+        {text: 'Ціна', value: 'price'},
+        {text: 'Швидкість', value: 'speed'},
+      ],
+      tableData: [
+        {name: 'Швидкість 50', price: '160.00.грн', speed: '50 Мбіт/с'},
+        {name: 'Швидкість 100', price: '210.00.грн', speed: '100 Мбіт/с'},
+        {name: 'Швидкість 500', price: '300.00.грн', speed: '500 Мбіт/с'},
+      ],
       fab: false,
+      tab: null,
       slides: [
         {link: 'https://mag.golden.net.ua/static/img/sliders/friends.webp'},
         {link: 'https://mag.golden.net.ua/static/img/sliders/new_year_box.webp'},

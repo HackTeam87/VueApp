@@ -1,8 +1,10 @@
 <template>
   <div>
+       <v-card-text>
      <p class="text-left">
        {{product.description}}
      </p>
+       </v-card-text>
   </div>
 </template>
 

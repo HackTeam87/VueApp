@@ -1,8 +1,7 @@
 <template>
   <div>
 <v-card-text>
-        <p class="text-left" v-html='post.text'></p>
-  <a href=""></a>
+        <p class=" subtitle-1 text-left" v-html='post.text'></p>
 </v-card-text>
   </div>
 </template>

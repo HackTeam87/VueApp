@@ -12,8 +12,10 @@ import InternetPricePage from '../views/internet/InternetPricePage';
 import DaniyaPrice from '../views/internet/daniya/DaniyaPrice';
 import EurocityPrice from '../views/internet/eurocity/EurocityPrice';
 import PromenadaPrice from '../views/internet/promenada/PromenadaPrice';
-import IntercomPage from '../views/IntercomPage';
-import ProductFilterPage from '../views/shop/ProductFilterPage';
+import IntercomPage from '../views/intercom/IntercomPage';
+import MainGroupPage from '../views/shop/MainGroupPage';
+import SubGroupPage from '../views/shop/SubGroupPage';
+import ProductPage from '../views/shop/ProductPage';
 import AboutPage from '../views/about/AboutPage';
 import DocsPage from '../views/docs/DocsPage';
 import NewsPage from '../views/news/NewsPage';
@@ -28,7 +30,10 @@ const routes = [
     {
         name: 'Main',
         path: '/',
-        component: MainPage
+        component: MainPage,
+         meta: {
+        breadcrumb: 'Home'
+      }
     },
     {
         name: 'MainSecurity',
@@ -95,10 +100,20 @@ const routes = [
         path: '/intercom',
         component: IntercomPage
     },
-     {
-        name: 'Shop',
-        path: '/shop',
-        component:ProductFilterPage
+    {
+        name: 'Group',
+        path: '/shop/group',
+        component:MainGroupPage
+    },
+    {
+        name: 'SubGroup',
+        path: '/shop/sub/group',
+        component:SubGroupPage
+    },
+    {
+        name: 'ProductPage',
+        path: '/shop/product',
+        component:ProductPage
     },
     {
         name: 'About',
@@ -117,7 +132,7 @@ const routes = [
     },
      {
         name: 'Contacts',
-        path: '/contacts',
+        path: '/contact',
         component:ContactsPage
     },
     {
