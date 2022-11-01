@@ -1,6 +1,5 @@
 <template>
     <div class="main">
-        <h1 class="heading">Магазин</h1>
         <v-container grid-list-md>
             <v-layout row wrap justify-center>
 
@@ -8,9 +7,10 @@
                     <v-card hover data-aos="zoom-in" data-aos-easing="ease" @click="Product(i.id)">
 
 
-                        <v-img class="white--text align-end" height="195px"
+                        <v-img class="white--text align-end" max-width="100%"
                                :src="i.img">
                         </v-img>
+                      
                         <v-card-title class="font-weight-medium headline">
                             <v-spacer/>
                             {{i.tag}}

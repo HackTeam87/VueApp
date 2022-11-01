@@ -24,6 +24,7 @@
               <v-list-item-title>Контакти</v-list-item-title>
             </v-list-item-content>
           </template>
+          
           <v-list-item>
             <v-list-item-title>
               <a href="tel:+38(097) 354 45 45" style="text-decoration: none;">+38(097) 354 45 45</a>
@@ -52,6 +53,10 @@
           <v-list-item href="/intercom">
             <v-icon aria-hidden="false">mdi-check</v-icon>
             Домофон
+          </v-list-item>
+          <v-list-item href="https://my.golden.net.ua/autorize.php">
+            <v-icon aria-hidden="false">mdi-check</v-icon>
+            Профіль
           </v-list-item>
           <v-divider></v-divider>
           <v-list-group :value="false" no-action sub-group>

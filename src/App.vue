@@ -4,12 +4,12 @@
         <v-main>
 
             <pre-loader></pre-loader>
-<!--            <bread-crumbs></bread-crumbs>-->
+            <bread-crumbs></bread-crumbs>
             <router-view></router-view>
             <scroll-back-button></scroll-back-button>
 
         </v-main>
-        <!--    <footer-page></footer-page>-->
+            <footer-page></footer-page>
 
     </v-app>
 
@@ -18,9 +18,10 @@
 
 <script>
     import HeaderPage from '@/components/HeaderPage.vue'
-    // import BreadCrumbs from '@/components/BreadCrumbs.vue'
+    import BreadCrumbs from '@/components/BreadCrumbs.vue'
     import PreLoader from '@/components/PreLoader.vue'
     import ScrollBackButton from '@/components/ScrollBackButton.vue'
+    import FooterPage from '@/components/FooterPage.vue'
 
     // import ContactButton from '@/components/ContactButton.vue'
 
@@ -30,9 +31,9 @@
         components: {
             PreLoader,
             HeaderPage,
-            // BreadCrumbs,
+            BreadCrumbs,
             ScrollBackButton,
-            // FooterPage
+            FooterPage
         }
     }
 </script>

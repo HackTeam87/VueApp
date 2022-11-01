@@ -1,26 +1,44 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
+// Главная
 import MainPage from '../views/MainPage';
+// Безопасность
 import MainSecurityPage from '../views/security/MainSecurityPage';
 import AccessControlPage from '../views/security/access-control/AccessControlPage';
 import AlarmSecurityPage from '../views/security/alarm-security/AlarmSecurityPage';
 import VideoSurveillancePage from '../views/security/video-surveillance/VideoSurveillancePage';
+import ProjectPage from '../views/security/project/ProjectPage';
+// Омо
 import OmoPage from '../views/iot/OmoPage';
 import VInternetMainPage from '../views/VInternetMainPage';
+// Интернет
 import InternetMainPage from '../views/InternetMainPage';
 import InternetPricePage from '../views/internet/InternetPricePage';
 import DaniyaPrice from '../views/internet/daniya/DaniyaPrice';
 import EurocityPrice from '../views/internet/eurocity/EurocityPrice';
 import PromenadaPrice from '../views/internet/promenada/PromenadaPrice';
+import OneHousePrice from '../views/internet/one_house/OneHousePrice';
+import UGPrice from '../views/internet/UG/UGPrice';
+// Интернет бизнес
+import ResidentialPricePage from '../views/internet/business/residential_complexes/ResidentialPricePage';
+import LobanovskogoPricePage from '../views/internet/business/lobanovskogo/LobanovskogoPricePage';
+import BerkovetskayaPricePage from '../views/internet/business/berkovetskaya/BerkovetskayaPricePage';
+// Домофон
 import IntercomPage from '../views/intercom/IntercomPage';
+// Магазин
 import MainGroupPage from '../views/shop/MainGroupPage';
 import SubGroupPage from '../views/shop/SubGroupPage';
 import ProductPage from '../views/shop/ProductPage';
+// О нас
 import AboutPage from '../views/about/AboutPage';
+// Документы
 import DocsPage from '../views/docs/DocsPage';
+// Новости
 import NewsPage from '../views/news/NewsPage';
 import NewsDetailPage from '../views/news/NewsDetailPage';
+// Партнеры
 import PartnersPage from '../views/partners/PartnersPage';
+// Инструкции
 import ManualPage from '../views/manual/ManualPage';
 import ContactsPage from '../views/contacts/ContactsPage';
 
@@ -31,44 +49,71 @@ const routes = [
         name: 'Main',
         path: '/',
         component: MainPage,
-         meta: {
-        breadcrumb: 'Home'
-      }
     },
     {
         name: 'MainSecurity',
         path: '/main/security',
-        component: MainSecurityPage
+        component: MainSecurityPage,
+        meta: {
+        key: 'Безпека'
+      }
     },
     {
         name: 'AccessControlPage',
         path: '/main/security/access/control',
-        component: AccessControlPage
+        component: AccessControlPage,
+         meta: {
+        key: 'Контроль доступу'
+        }
     },
     {
         name: 'AlarmSecurityPage',
         path: '/main/security/alarm/security',
-        component: AlarmSecurityPage
+        component: AlarmSecurityPage,
+         meta: {
+        key: 'Охоронна сигналізація'
+        }
     },
     {
         name: 'VideoSurveillancePage',
         path: '/main/security/video/surveillance',
-        component: VideoSurveillancePage
+        component: VideoSurveillancePage,
+         meta: {
+        key: 'Відеоспостереження'
+        }
+    },
+
+    {
+        name: 'ProjectPage',
+        path: '/main/security/project/project',
+        component: ProjectPage,
+         meta: {
+        key: 'Проекти'
+        }
     },
      {
         name: 'OmoPage',
         path: '/iot',
-        component: OmoPage
+        component: OmoPage,
+         meta: {
+        key: 'Розумний дім'
+        }
     },
     {
         name: 'ManualPage',
         path: '/manual',
-        component: ManualPage
+        component: ManualPage,
+          meta: {
+        key: 'Інструкції'
+        }
     },
      {
         name: 'InternetMain',
         path: '/internet',
-        component: InternetMainPage
+        component: InternetMainPage,
+         meta: {
+        key: 'Інтернет'
+        }
     },
     {
         name: 'VInternetMain',
@@ -78,7 +123,7 @@ const routes = [
     {
         name: 'InternetPice',
         path: '/internet/price',
-        component: InternetPricePage
+        component: InternetPricePage,
     },
     {
         name: 'DaniyaPice',
@@ -96,19 +141,51 @@ const routes = [
         component: PromenadaPrice
     },
     {
-        name: 'Intercom',
-        path: '/intercom',
-        component: IntercomPage
+        name: 'OneHousePrice',
+        path: '/internet/price/one_house',
+        component: OneHousePrice
     },
     {
-        name: 'Group',
+        name: 'UGPrice',
+        path: '/internet/price/UG',
+        component: UGPrice
+    },
+    {
+        name: 'ResidentialPrice',
+        path: '/internet/business/residential',
+        component: ResidentialPricePage
+    },
+    {
+        name: 'LobanovskogoPrice',
+        path: '/internet/business/lobanovskogo',
+        component: LobanovskogoPricePage
+    },
+    {
+        name: 'BerkovetskayaPrice',
+        path: '/internet/business/berkovetskaya',
+        component: BerkovetskayaPricePage
+    },
+
+    {
+        name: 'Intercom',
+        path: '/intercom',
+        component: IntercomPage,
+          meta: {
+        key: 'Домофон'
+        }
+    },
+    {
+        name: 'Shop',
         path: '/shop/group',
-        component:MainGroupPage
+        component:MainGroupPage,
+          meta: {
+        key: 'Магазин'
+      }
     },
     {
         name: 'SubGroup',
         path: '/shop/sub/group',
-        component:SubGroupPage
+        component:SubGroupPage,
     },
     {
         name: 'ProductPage',
@@ -118,12 +195,18 @@ const routes = [
     {
         name: 'About',
         path: '/about',
-        component:AboutPage
+        component:AboutPage,
+        meta: {
+        key: 'Про компанію'
+      }
     },
      {
         name: 'News',
         path: '/news',
-        component:NewsPage
+        component:NewsPage,
+         meta: {
+        key: 'Новини'
+      }
     },
     {
         name: 'NewsDetail',
@@ -138,14 +221,20 @@ const routes = [
     {
         name: 'Docs',
         path: '/docs',
-        component:DocsPage
+        component:DocsPage,
+        meta: {
+        key: 'Документи'
+      }
     },
     {
         name: 'Partners',
         path: '/partners',
-        component:PartnersPage
+        component:PartnersPage,
+        meta: {
+        key: 'Партнери'
+      }
     }
-   
+
 ];
 
 const router = new VueRouter({

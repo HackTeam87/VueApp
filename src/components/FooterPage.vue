@@ -66,12 +66,20 @@
 </template>
 
 <script>
+        (function(w,d,u){
+                var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/60000|0);
+                var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
+        })(window,document,'https://cdn.bitrix24.ua/b18672047/crm/site_button/loader_2_ycu79q.js');
+</script>
+
+<script>
 import SendForm from '@/components/SendForm.vue'
 
 export default {
   data: () => ({
     social: [
-      {title: 'mdi-facebook', link: 'https://www.facebook.com/golden.net.ua/'},
+      {title: 'mdi-facebook', link: 'https://www.facebook.com/Goldennet-104002168883904/'},
+      {title: 'mdi-instagram', link: 'https://instagram.com/golden.net.ua'},
     ],
     FooterLinkGroup1: [
       {title: 'Домашня', link: '/'},
@@ -81,7 +89,7 @@ export default {
     FooterLinkGroup2: [
       {title: 'Безпека', link: '/main/security'},
       {title: 'Новини', link: '/news'},
-      {title: 'Магазин', link: '/shop'},
+      {title: 'Магазин', link: '/shop/group'},
     ],
     FooterLinkGroup3: [
       {title: 'Інструкції', link: '/manual'},

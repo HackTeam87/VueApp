@@ -1,13 +1,13 @@
 <template>
   <div>
- <v-btn
+ <v-btn   class="ml-7 mb-9"
           v-scroll="onScroll"
           v-show="fab"
           fab
           dark
           fixed
           bottom
-          right
+          left
           color="indigo"
           @click="toTop"
       >
@@ -35,4 +35,8 @@ export default {
   }
 }
 </script>
+
+
+
+
 

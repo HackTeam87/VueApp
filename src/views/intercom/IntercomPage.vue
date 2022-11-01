@@ -3,39 +3,73 @@
     <h1 class="heading">Домофон</h1>
     <v-container>
       <v-row>
-        <v-col col="12" xs="12" sm="6" md="6" lg="6">
+        <v-col col="12" xs="12" sm="12" md="6" lg="6">
           <v-card class="pricingTable">
-            <v-icon aria-hidden="false" left class="mdi-48px">mdi-phone-incoming</v-icon>
+            <v-icon aria-hidden="false" left class="mdi-48px"
+              >mdi-phone-incoming</v-icon
+            >
             <div class="pricingTable-header">
-              <h3 class="title">Домофон Аудио</h3>
-              <span class="price-value">20</span>
-            </div>
-            <ul class="pricing-content">
-              <li class="body-1">20 грн/місяць</li>
-              <li>Вартість підключення 350грн</li>
-            </ul>
-          </v-card>
-        </v-col>
-        <v-col col="12" xs="12" sm="6" md="6" lg="6">
-          <v-card class="pricingTable">
-            <v-icon aria-hidden="false" left class="mdi-48px">mdi-phone-incoming</v-icon>
-            <div class="pricingTable-header">
-              <h3 class="title">Домофон Видео</h3>
+              <h3 class="title">Обслуговування домофона</h3>
               <span class="price-value">40</span>
             </div>
             <ul class="pricing-content">
               <li class="body-1">40 грн/місяць</li>
-              <li>Вартість підключення 500грн</li>
+              <li>Вартість підключення 400грн (аудіо)</li>
+              <li>Вартість підключення 600грн (відео)</li>
             </ul>
           </v-card>
         </v-col>
+        <v-col col="12" xs="12" sm="12" md="6" lg="6">
+          <v-card class="pricingTable" @click="readFileInternetI()">
+            <v-icon aria-hidden="false" left class="mdi-48px"
+              >mdi-phone-incoming</v-icon
+            >
+            <h3 class="title">Договір домофон</h3>
+            <v-img
+              class="white--text align-end"
+              height="159px"
+              src="@/assets/docs/images/intercom.webp"
+            >
+            </v-img>
+            <v-card-text>
+              <v-icon aria-hidden="false">mdi-chevron-double-down</v-icon>
+            </v-card-text>
+          </v-card>
+        </v-col>
+
+        <!-- <v-col col="12" xs="12" sm="6" md="6" lg="6">
+          <v-card class="pricingTable">
+            <v-icon aria-hidden="false" left class="mdi-48px">mdi-phone-incoming</v-icon>
+            <div class="pricingTable-header">
+              <h3 class="title">Домофон Відео</h3>
+              <span class="price-value">50</span>
+            </div>
+            <ul class="pricing-content">
+              <li class="body-1">50 грн/місяць</li>
+              <li>Вартість підключення 600грн</li>
+            </ul>
+          </v-card>
+        </v-col> -->
       </v-row>
+      <br>
+      <br>
     </v-container>
   </div>
 </template>
 
 <script>
-export default {}
+export default {
+  name: "intercom-page",
+  data: () => ({}),
+  methods: {
+    readFileInternetI() {
+      window.open(
+        "https://mag.golden.net.ua/static/docs/contract_intercom.pdf",
+        "_blank"
+      );
+    },
+  },
+};
 </script>
 
 <style scoped>
@@ -107,7 +141,6 @@ export default {}
 }
 
 .pricingTable .price-value {
-
   border-bottom: 5px solid #002244;
   font-size: 30px;
   font-weight: 700;

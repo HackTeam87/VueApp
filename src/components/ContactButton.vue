@@ -22,6 +22,9 @@
       <v-btn fab dark small color="light-blue accent-3" :href="'https://t.me/GoldenNetUaBot'">
         <v-icon> mdi-telegram</v-icon>
       </v-btn>
+      <v-btn fab dark small color="deep-orange accent-3" :href="'mailto:info@golden.net.ua'">
+        <v-icon> mdi-gmail</v-icon>
+      </v-btn>
     </v-speed-dial>
   </v-card>
 
@@ -71,7 +74,4 @@ export default {
   z-index: 999;
 }
 
-#create .v-btn--floating {
-
-}
 </style>

@@ -1,6 +1,5 @@
 <template>
     <div class="main">
-        <h1 class="heading">Магазин</h1>
         <v-container grid-list-md>
             <v-layout row wrap justify-center>
 
@@ -10,9 +9,14 @@
                                sm="4">
                             <v-card>
                                 <v-card-text>
-                                    <div class="font-weight-light subtitle-1  text-right ">Ціна: <span
+
+                                    <div class="font-weight-light subtitle-1  text-right ">
+                                        Ціна: <span
                                             style="color:red;">{{ p.price }}</span>.грн
                                     </div>
+                                </v-card-text>
+                                <v-card-text>
+
                                     <p class="headline font-weight-light text-uppercase">{{ p.name }}</p>
 
                                     <v-img class="white--text align-end" height="280px" v-bind:src="p.img"></v-img>
@@ -22,11 +26,17 @@
                                             {{ p.short_description }}
                                         </p>
                                     </div>
-                                     <ProductDetailPage v-show="clickedProduct === p.id"
-                                                   v-bind:product="p"/>
+                                    <ProductDetailPage v-show="clickedProduct === p.id"
+                                                       v-bind:product="p"/>
                                 </v-card-text>
 
                                 <v-card-actions>
+                                    <v-chip v-if="p.discount" class="ma-2 text-left" color="error" label outlined>
+                                            <v-icon left>
+                                               mdi-currency-usd-off
+                                            </v-icon>
+                                            Знижка: {{ p.discount }}.грн
+                                        </v-chip>
                                     <v-spacer></v-spacer>
                                     <v-btn small replace class="indigo" style="color:white;"
                                            @click="clickedProduct = p.id" v-show="clickedProduct !== p.id">
@@ -51,6 +61,7 @@
 
 <script>
     import ProductDetailPage from '@/views/shop/ProductDetailPage.vue'
+
     export default {
         name: 'product-page',
         components: {

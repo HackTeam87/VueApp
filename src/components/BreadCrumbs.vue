@@ -1,9 +1,14 @@
 <template>
     <div>
         <template>
-            <v-breadcrumbs :items="crumbs" divider="/">
+            <v-container>
 
-            </v-breadcrumbs>
+                <v-breadcrumbs v-for="c in crumbs" :key="c.path" divider=">">
+                    <v-breadcrumbs-item to="/">Домашня</v-breadcrumbs-item>
+                    <v-breadcrumbs-item :to="c.path">{{c.meta.key}}</v-breadcrumbs-item>
+                </v-breadcrumbs>
+
+            </v-container>
         </template>
     </div>
 </template>
@@ -15,13 +20,15 @@
             crumbs: []
         }),
         created: function () {
-            this.bread()
+            this.getLog()
         },
 
         methods: {
-            bread() {
-                let crumb = {text: $breadcrumbs[0].path}
-                this.crumbs.push(crumb)
+            getLog() {
+                if (this.$route.matched[0].meta.key) {
+                    this.crumbs = this.$route.matched
+                }
+
             }
         }
     }

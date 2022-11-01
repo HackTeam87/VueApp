@@ -10,7 +10,7 @@
 
                         <v-card class="my-3" hover data-aos="zoom-in" data-aos-easing="ease">
 
-                            <h3 class="headline mb-0 text-center" style="color:#ffffff;background-color:#002244"> {{
+                            <h3 class="headline mb-0 text-left" style="color:#ffffff;background-color:#002244"> {{
                                 post.title }}</h3>
                             <v-divider></v-divider>
 

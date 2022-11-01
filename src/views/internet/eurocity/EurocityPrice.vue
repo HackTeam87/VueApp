@@ -1,5 +1,5 @@
 <template>
-  <div class="white lighten-3" style="margin-top: 100px;">
+  <div class="white lighten-3" >
     <h1 class="heading">Жк Евромісто</h1>
     <v-container>
       <v-row no-gutters>
@@ -85,6 +85,44 @@
           </div>
         </div>
 
+        <div class="container services_description">
+          <p style="font-weight:bold;font-size:2em;text-align:center;">Шановні абоненти!</p>
+
+<p style="font-weight:bold;" >З метою розвитку, з вересня 2022 року, ми почали проводити поступове об'єднання мереж GOLDENNET та SIMNET на ЖК "Евромісто". </p>
+<p> Технічні фахівці проводитимуть поступове переключення абонентів на біллінг 
+ <a style="text-decoration:none;" href="https://www.simnet.kiev.ua"> (особистий кабінет) SIMNET (https://www.simnet.kiev.ua) </a>
+  з збереженням існуючих коштів на балансі та переліком послуг.
+</p>
+<p>
+В більшості випадків переключення відбудеться автоматично без додаткових налаштувань, у разі проблем з доступом після переключення - одразу телефонуйте до технічної підтримки SIMNET. 
+Всі виклики майстрів в перехідній період - безкоштовні.
+</p>
+
+<p>
+В подальшому послуги будуть надаватись під торговою маркою SIMNET (ТОВ Старгруп).
+
+Типовий договір-оферта розміщений в особистому кабінеті SIMNET та за посиланням 
+<a style="text-decoration:none;" href="https://simnet.kiev.ua/simnet_stargroup.pdf">https://simnet.kiev.ua/simnet_stargroup.pdf</a>
+</p>
+
+<p>
+Після одержання СМС від SIMNET з номером договору оплату слід проводити на їх реквізити.
+<br>
+
+Способи оплати SIMNET:
+<a style="text-decoration:none;" href=" https://simnet.kiev.ua/payments"> https://simnet.kiev.ua/payments</a>
+<br>
+Телефони SIMNET: <a style="text-decoration:none;" href="tel:0442248434">(044) 224-84-34</a>, 
+<br> 
+<a style="text-decoration:none;" href="tel:0986444471">(098) 6-4444-71</a>,
+     <a style="text-decoration:none;" href="tel:0666444470">(066) 6-4444-70</a>, 
+     <a style="text-decoration:none;" href="tel:0936444470">(093) 6-4444-70</a>
+
+<br>
+Сайт: <a style="text-decoration:none; color: blue;" href="https://simnet.kiev.ua">https://simnet.kiev.ua</a>
+          </p>
+        </div>
+
       </v-row>
     </v-container>
   </div>
@@ -104,32 +142,23 @@ export default {
           },
           {
             name: '+ Зовнішній IP',
-            price: 30,
-            activate: false
-          },
-          {
-            name: '+ TV 194 канали',
-            price: 30,
-            activate: false
-          },
-          {
-            name: '+ TV 247 каналів',
             price: 50,
             activate: false
           },
           {
-            name: '+ TV 249 каналів + Футбол',
-            price: 80,
+            name: '+ TV 193 канали',
+            price: 30,
             activate: false
           },
           {
-            name: '+ TV 261 канали',
+            name: '+ TV 245 каналів',
+            price: 50,
+            activate: false
+          },
+          
+          {
+            name: '+ TV 259 канали',
             price: 100,
-            activate: false
-          },
-          {
-            name: '+ TV 263 каналів + Футбол',
-            price: 120,
             activate: false
           }
         ],
@@ -141,34 +170,26 @@ export default {
           },
           {
             name: '+ Зовнішній IP',
-            price: 30,
-            activate: false
-          },
-          {
-            name: '+ TV 194 канали',
-            price: 30,
-            activate: false
-          },
-          {
-            name: '+ TV 247 каналів',
             price: 50,
             activate: false
           },
-          {
-            name: '+ TV 249 каналів + Футбол',
-            price: 80,
+           {
+            name: '+ TV 193 канали',
+            price: 30,
             activate: false
           },
           {
-            name: '+ TV 261 канали',
+            name: '+ TV 245 каналів',
+            price: 50,
+            activate: false
+          },
+          
+          {
+            name: '+ TV 259 канали',
             price: 100,
             activate: false
-          },
-          {
-            name: '+ TV 263 каналів + Футбол',
-            price: 120,
-            activate: false
-          }],
+          }
+          ],
         price_100: [
           {
             name: '100 Мбіт/с',
@@ -177,34 +198,26 @@ export default {
           },
           {
             name: '+ Зовнішній IP',
-            price: 30,
-            activate: false
-          },
-          {
-            name: '+ TV 194 канали',
-            price: 30,
-            activate: false
-          },
-          {
-            name: '+ TV 247 каналів',
             price: 50,
             activate: false
           },
-          {
-            name: '+ TV 249 каналів + Футбол',
-            price: 80,
+           {
+            name: '+ TV 193 канали',
+            price: 30,
             activate: false
           },
           {
-            name: '+ TV 261 канали',
+            name: '+ TV 245 каналів',
+            price: 50,
+            activate: false
+          },
+          
+          {
+            name: '+ TV 259 канали',
             price: 100,
             activate: false
-          },
-          {
-            name: '+ TV 263 каналів + Футбол',
-            price: 120,
-            activate: false
-          }],
+          }
+          ],
         price_500: [
           {
             name: '500 Мбіт/с',
@@ -213,34 +226,26 @@ export default {
           },
           {
             name: '+ Зовнішній IP',
-            price: 30,
-            activate: false
-          },
-          {
-            name: '+ TV 194 канали',
-            price: 30,
-            activate: false
-          },
-          {
-            name: '+ TV 247 каналів',
             price: 50,
             activate: false
           },
-          {
-            name: '+ TV 249 каналів + Футбол',
-            price: 80,
+           {
+            name: '+ TV 193 канали',
+            price: 30,
             activate: false
           },
           {
-            name: '+ TV 261 канали',
+            name: '+ TV 245 каналів',
+            price: 50,
+            activate: false
+          },
+          
+          {
+            name: '+ TV 259 канали',
             price: 100,
             activate: false
-          },
-          {
-            name: '+ TV 263 каналів + Футбол',
-            price: 120,
-            activate: false
-          }],
+          }
+          ],
       },
     }
   },

@@ -1,7 +1,6 @@
 <template>
   <div class="main">
-    <h1 class="heading">Голденнет</h1>
-    <contact-button></contact-button>
+    <!-- <contact-button></contact-button> -->
     <v-container grid-list-md>
       <v-layout row wrap>
 
@@ -89,22 +88,36 @@
         </v-flex>
 
       </v-layout>
+       
     </v-container>
-    <footer-page></footer-page>
-
+    <!-- <footer-page></footer-page> -->
+   
+    
   </div>
+  
 </template>
 
 <script>
-import ContactButton from '@/components/ContactButton.vue'
-import FooterPage from '@/components/FooterPage.vue'
+// import ContactButton from '@/components/ContactButton.vue'
 
-export default {
-  components: {
-    ContactButton,
-    FooterPage
-  },
-  data: () => ({}),
+// export default {
+//   name: 'MainPage',
+//   components: {
+//     ContactButton,
+//   },
+//   data: () => ({}),
 
-}
+// }
+
+ (function(w,d,u){
+                var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/60000|0);
+                var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
+        })(window,document,'https://cdn.bitrix24.ua/b18672047/crm/site_button/loader_2_ycu79q.js');
+
 </script>
+
+
+
+
+
+

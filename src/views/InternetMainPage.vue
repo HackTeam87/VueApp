@@ -1,29 +1,7 @@
 <template>
   <div class="white lighten-3">
 
-    <v-container fluid>
-      <v-carousel cycle height="100%" hide-delimiter-background show-arrows-on-hover>
-        <template v-slot:prev="{ on, attrs }">
-          <v-btn color="#fec422" v-bind="attrs" v-on="on">
-            <v-icon>mdi-chevron-double-left</v-icon>
-          </v-btn>
-        </template>
-        <template v-slot:next="{ on, attrs }">
-          <v-btn color="#fec422" v-bind="attrs" v-on="on">
-            <v-icon>mdi-chevron-double-right</v-icon>
-          </v-btn>
-        </template>
-        <v-carousel-item v-for="(slide,index) in slides" :key="index">
-          <v-sheet height="100%">
 
-            <div class="display-3">
-              <v-img v-bind:src="slide.link" width="130%"></v-img>
-            </div>
-
-          </v-sheet>
-        </v-carousel-item>
-      </v-carousel>
-    </v-container>
     <h1 class="heading">Інтернет + IPTV</h1>
 
 
@@ -44,7 +22,7 @@
     <v-tabs-items v-model="tab">
       <v-tab-item value="tab-1">
         <v-container grid-list-md>
-          <v-layout row wrap>
+          <v-layout row wrap justify-center>
 
             <v-flex d-flex sm4>
               <v-card href="/internet/price/daniya" hover data-aos="zoom-in" data-aos-easing="ease">
@@ -87,36 +65,126 @@
 
               </v-card>
             </v-flex>
+            <v-flex d-flex sm4>
+              <v-card href="/internet/price/one_house" hover data-aos="zoom-in" data-aos-easing="ease">
+
+                <v-card-title class="text-right">Жк One House</v-card-title>
+                <v-img class="white--text align-end" height="150px"
+                       src="@/assets/img/internet_price/one_house.webp">
+                </v-img>
+                <v-card-text>
+                  <v-icon aria-hidden="false">mdi-server-network</v-icon>
+                </v-card-text>
+
+              </v-card>
+              </v-flex>
+
+              <v-flex d-flex sm4>
+              <v-card href="/internet/price/UG" hover data-aos="zoom-in" data-aos-easing="ease">
+
+                <v-card-title class="text-right">Каланчак </v-card-title>
+                <v-img class="white--text align-end" height="150px"
+                       src="@/assets/img/internet_price/Kalanchak.webp">
+                </v-img>
+                <v-card-text>
+                  <v-icon aria-hidden="false">mdi-server-network</v-icon>
+                </v-card-text>
+
+              </v-card>
+              </v-flex>
+
+               <v-flex d-flex sm4>
+              <v-card href="/internet/price/UG" hover data-aos="zoom-in" data-aos-easing="ease">
+
+                <v-card-title class="text-right">Чаплинка </v-card-title>
+                <v-img class="white--text align-end" height="150px"
+                       src="@/assets/img/internet_price/Chaplinka.webp">
+                </v-img>
+                <v-card-text>
+                  <v-icon aria-hidden="false">mdi-server-network</v-icon>
+                </v-card-text>
+
+              </v-card>
+              </v-flex>
 
           </v-layout>
         </v-container>
       </v-tab-item>
-
       <v-tab-item value="tab-2">
-        <v-container>
-          <v-card>
-            <v-data-table
-                mobile-breakpoint="0"
-                :headers="headers"
-                :items="tableData"
-                :items-per-page="5"
-                :hide-default-footer="true"
-            >
-              <template v-slot:body="{ items }">
+        <v-container grid-list-md>
+          <v-layout row wrap justify-center>
 
-                <tbody>
-                <tr v-for="(item, index) in items" :key="index">
-                  <td class="text-left">{{ item.name }}</td>
-                  <td class="text-left">{{ item.price }}</td>
-                  <td class="text-left">{{ item.speed }}</td>
-                </tr>
-                </tbody>
-              </template>
-            </v-data-table>
-          </v-card>
+            <v-flex d-flex sm4>
+              <v-card href="/internet/business/lobanovskogo" hover data-aos="zoom-in" data-aos-easing="ease">
+
+                <v-card-title class="text-right">Лобановского 56 (Star Centre)</v-card-title>
+                <v-img class="white--text align-end" height="150px"
+                       src="@/assets/img/internet_price/business/star-centre.webp">
+                </v-img>
+                <v-card-text>
+                  <v-icon aria-hidden="false">mdi-server-network</v-icon>
+                </v-card-text>
+
+
+              </v-card>
+            </v-flex>
+            <v-flex d-flex sm4>
+              <v-card href="/internet/business/berkovetskaya" hover data-aos="zoom-in" data-aos-easing="ease">
+
+                <v-card-title class="text-right">Берковецька 6а</v-card-title>
+                <v-img class="white--text align-end" height="150px"
+                       src="@/assets/img/internet_price/business/berkovetskaya.webp">
+                </v-img>
+                <v-card-text>
+                  <v-icon aria-hidden="false">mdi-server-network</v-icon>
+                </v-card-text>
+
+
+              </v-card>
+            </v-flex>
+            <v-flex d-flex sm4>
+              <v-card href="/internet/business/residential" hover data-aos="zoom-in" data-aos-easing="ease">
+
+                <v-card-title class="text-right">Житлові комплекси (Бізнес)</v-card-title>
+                <v-img class="white--text align-end" height="150px"
+                       src="@/assets/img/internet_price/business/business-complex.webp">
+                </v-img>
+
+                <v-card-text>
+                  <v-icon aria-hidden="false">mdi-server-network</v-icon>
+                </v-card-text>
+
+              </v-card>
+            </v-flex>
+
+          </v-layout>
         </v-container>
       </v-tab-item>
     </v-tabs-items>
+
+     <v-container fluid>
+      <v-carousel cycle height="100%" hide-delimiter-background show-arrows-on-hover>
+        <template v-slot:prev="{ on, attrs }">
+          <v-btn color="#fec422" v-bind="attrs" v-on="on">
+            <v-icon>mdi-chevron-double-left</v-icon>
+          </v-btn>
+        </template>
+        <template v-slot:next="{ on, attrs }">
+          <v-btn color="#fec422" v-bind="attrs" v-on="on">
+            <v-icon>mdi-chevron-double-right</v-icon>
+          </v-btn>
+        </template>
+        <v-carousel-item v-for="(slide,index) in slides" :key="index">
+          <v-sheet height="100%">
+
+            <div class="display-3">
+              <v-img v-bind:src="slide.link" width="130%"></v-img>
+            </div>
+
+          </v-sheet>
+        </v-carousel-item>
+      </v-carousel>
+    </v-container>
 
     <h2 class="heading">Додаткові послуги</h2>
     <v-container>
@@ -134,18 +202,13 @@
                   <v-list-item-title class="subtitle-2 mb-1">
                     Налаштування Wi-Fi роутера
                   </v-list-item-title>
-                  <v-list-item-subtitle>
-                    * - Роутер абонента, базові налаштування Інтернет - 100 грн. з урахуванням налаштування одного
-                    пристрою, за другий і наступні - 50 грн.
-                  </v-list-item-subtitle>
-                  <v-list-item-subtitle>
-                    * - Роутер Голденнет базові налаштування Інтернет - 0 грн. з урахуванням налаштування одного
-                    пристрою, за другий і наступні - 50 грн.
-                  </v-list-item-subtitle>
-                  <v-list-item-subtitle>
-                    * Розширене налаштування програмного забезпечення Wi-Fi роутера: - Переадресація портів,
-                    налаштування систем безпеки, VPN та ін. - 250 грн
-                  </v-list-item-subtitle>
+
+                  <v-list-item-subtitle> * - Роутер абонента, базові налаштування Інтернет - 50 грн.</v-list-item-subtitle>
+                   <v-list-item-subtitle> З урахуванням налаштування одного пристрою .</v-list-item-subtitle>
+
+                  <v-list-item-subtitle>* Розширене налаштування програмного забезпечення роутера: </v-list-item-subtitle>
+                   <v-list-item-subtitle>- Переадресація портів, налаштування систем безпеки, VPN та ін. - від 250 грн</v-list-item-subtitle>
+                  
                 </v-list-item-content>
 
                 <v-list-item-avatar tile size="70">
@@ -192,7 +255,7 @@
                 <v-list-item-content>
                   <div class="overline mb-4">Goldennet</div>
                   <v-list-item-title class="subtitle-2 mb-1">Виклик фахівця</v-list-item-title>
-                  <v-list-item-subtitle> * для огляду та консультації - 100 грн.</v-list-item-subtitle>
+                  <v-list-item-subtitle> * для огляду та консультації - 50 грн.</v-list-item-subtitle>
                   <v-list-item-subtitle> * Терміновий виклик спеціаліста або термінове підключення - 100 грн.
                     (протягом
                     24-х годин)
@@ -217,15 +280,15 @@
                     Goldennet
                   </div>
                   <v-list-item-title class="subtitle-2 mb-1">Телевізор SMART Android TV</v-list-item-title>
+
                   <v-list-item-subtitle>
                     * Налаштування мережевого медіаплеєра або SMART-TV - виклик майстра додому для налаштування . -
-                    Обладнання абонента - 100 грн.
+                    Обладнання абонента - 50 грн.
                   </v-list-item-subtitle>
-                  <v-list-item-subtitle>
-                    * Розширене налаштування програмного забезпечення SMART-TV або медіаплеєра: - Обладнання
-                    абонента -
-                    200 грн.
-                  </v-list-item-subtitle>
+                
+                  <v-list-item-subtitle>* Розширене налаштування програмного забезпечення SMART-TV або медіаплеєра:</v-list-item-subtitle>
+                  <v-list-item-subtitle>- Обладнання абонента - від 250 грн.</v-list-item-subtitle>
+
                 </v-list-item-content>
 
                 <v-list-item-avatar tile size="70">
@@ -246,7 +309,7 @@
                     Goldennet
                   </div>
                   <v-list-item-title class="subtitle-2 mb-1">Обжим кабелю</v-list-item-title>
-                  <v-list-item-subtitle>* Додаткова заміна (обтиск) коннектора RJ-45 - 15 грн/шт.
+                  <v-list-item-subtitle>* Додаткова заміна (обтиск) коннектора RJ-45 - 25 грн/шт.
                   </v-list-item-subtitle>
                 </v-list-item-content>
 
@@ -271,7 +334,7 @@
                     Статичний (зовнішній) IP адрес
                   </v-list-item-title>
                   <v-list-item-subtitle>
-                    * - 30 грн/міс.
+                    * - 50 грн/міс.
                   </v-list-item-subtitle>
                 </v-list-item-content>
 
@@ -295,7 +358,7 @@
                   <v-list-item-title class="subtitle-2 mb-1">
                     Монтаж короба
                   </v-list-item-title>
-                  <v-list-item-subtitle>Монтаж кабельного короба - 8 грн/метр.</v-list-item-subtitle>
+                  <v-list-item-subtitle>Монтаж кабельного короба - 20 грн/метр.</v-list-item-subtitle>
                 </v-list-item-content>
 
                 <v-list-item-avatar tile size="70">
@@ -318,7 +381,7 @@
                   <v-list-item-title class="subtitle-2 mb-1">
                     Монтаж інтернет-розетки
                   </v-list-item-title>
-                  <v-list-item-subtitle>* - 50 грн/шт. RJ-45</v-list-item-subtitle>
+                  <v-list-item-subtitle>* - 75 грн/шт. RJ-45</v-list-item-subtitle>
                 </v-list-item-content>
 
                 <v-list-item-avatar tile size="70">
@@ -339,11 +402,11 @@
                     Goldennet
                   </div>
                   <v-list-item-title class="subtitle-2 mb-1">Монтаж кабелю</v-list-item-title>
-                  <v-list-item-subtitle>* - 8 грн/метр.</v-list-item-subtitle>
-                  <v-list-item-subtitle>
-                    * Додатковий монтаж кабелю в приміщенні замовника відкритим шляхом (кріплення кабелю кліпсами по
-                    плінтусу),без урахування кабелю.
-                  </v-list-item-subtitle>
+
+                  <v-list-item-subtitle>* - 15 грн/метр.</v-list-item-subtitle>
+                  <v-list-item-subtitle>* Додатковий монтаж кабелю в приміщенні замовника відкритим шляхом . </v-list-item-subtitle>
+                  <v-list-item-subtitle>Кріплення кабелю кліпсами поплінтусу,без урахування ціни кабелю.</v-list-item-subtitle>
+
                 </v-list-item-content>
 
                 <v-list-item-avatar tile size="70">
@@ -406,8 +469,9 @@ export default {
       fab: false,
       tab: null,
       slides: [
+        {link: 'https://mag.golden.net.ua/static/img/sliders/uk_banner.webp'},
         {link: 'https://mag.golden.net.ua/static/img/sliders/friends.webp'},
-        {link: 'https://mag.golden.net.ua/static/img/sliders/new_year_box.webp'},
+        
         // {link: 'https://mag.golden.net.ua/static/img/sliders/new_year_box1.webp'}
       ],
     }
