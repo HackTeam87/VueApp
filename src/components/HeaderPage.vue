@@ -27,17 +27,22 @@
           
           <v-list-item>
             <v-list-item-title>
-              <a href="tel:+38(097) 354 45 45" style="text-decoration: none;">+38(097) 354 45 45</a>
+              <a href="tel:+380973544545" style="text-decoration: none;">+38(097) 354 45 45</a>
             </v-list-item-title>
           </v-list-item>
           <v-list-item>
             <v-list-item-title>
-              <a href="tel:+38(099) 354 45 45" style="text-decoration: none; color:red;">+38(099) 354 45 45</a>
+              <a href="tel:+380993544545" style="text-decoration: none; color:red;">+38(099) 354 45 45</a>
             </v-list-item-title>
           </v-list-item>
           <v-list-item>
             <v-list-item-title>
-              <a href="tel:+38(093) 354 45 45" style="text-decoration: none; color:orange;">+38(093) 354 45 45</a>
+              <a href="tel:+380933544545" style="text-decoration: none; color:orange;">+38(093) 354 45 45</a>
+            </v-list-item-title>
+          </v-list-item>
+           <v-list-item>
+            <v-list-item-title>
+              <a href="tel:+380932922901" style="text-decoration: none; color:gray;">+38(093) 292 29 01</a>
             </v-list-item-title>
           </v-list-item>
         </v-list-group>
@@ -220,6 +225,7 @@ export default ({
         {title: '+38(097) 354 4545', link: '0973544545'},
         {title: '+38(099) 354 4545', link: '0993544545'},
         {title: '+38(093) 354 4545', link: '0933544545'},
+        {title: '+38(093) 292 2901', link: '0932922901'},
       ],
       company: [
         {title: 'Про Компанію', link: '/about'},

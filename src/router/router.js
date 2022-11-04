@@ -14,6 +14,7 @@ import VInternetMainPage from '../views/VInternetMainPage';
 // Интернет
 import InternetMainPage from '../views/InternetMainPage';
 import InternetPricePage from '../views/internet/InternetPricePage';
+import SofiyaPrice from '../views/internet/sofiya/SofiyaPrice';
 import DaniyaPrice from '../views/internet/daniya/DaniyaPrice';
 import EurocityPrice from '../views/internet/eurocity/EurocityPrice';
 import PromenadaPrice from '../views/internet/promenada/PromenadaPrice';
@@ -124,6 +125,11 @@ const routes = [
         name: 'InternetPice',
         path: '/internet/price',
         component: InternetPricePage,
+    },
+    {
+        name: 'SofiyaPice',
+        path: '/internet/price/sofiya',
+        component: SofiyaPrice
     },
     {
         name: 'DaniyaPice',

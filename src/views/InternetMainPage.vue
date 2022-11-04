@@ -25,6 +25,21 @@
           <v-layout row wrap justify-center>
 
             <v-flex d-flex sm4>
+              <v-card href="/internet/price/sofiya" hover data-aos="zoom-in" data-aos-easing="ease">
+
+                <v-card-title class="text-right">ЖК Софіївський Квартал</v-card-title>
+                <v-img class="white--text align-end" height="150px"
+                       src="@/assets/img/internet_price/sofiya.webp">
+                </v-img>
+                <v-card-text>
+                  <v-icon aria-hidden="false">mdi-server-network</v-icon>
+                </v-card-text>
+
+
+              </v-card>
+            </v-flex>
+
+            <v-flex d-flex sm4>
               <v-card href="/internet/price/daniya" hover data-aos="zoom-in" data-aos-easing="ease">
 
                 <v-card-title class="text-right">Жк Данія</v-card-title>
@@ -38,6 +53,7 @@
 
               </v-card>
             </v-flex>
+
             <v-flex d-flex sm4>
               <v-card href="/internet/price/eurocity" hover data-aos="zoom-in" data-aos-easing="ease">
 
@@ -52,6 +68,7 @@
 
               </v-card>
             </v-flex>
+
             <v-flex d-flex sm4>
               <v-card href="/internet/price/promenada" hover data-aos="zoom-in" data-aos-easing="ease">
 
