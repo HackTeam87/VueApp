@@ -20,6 +20,7 @@ import EurocityPrice from '../views/internet/eurocity/EurocityPrice';
 import PromenadaPrice from '../views/internet/promenada/PromenadaPrice';
 import OneHousePrice from '../views/internet/one_house/OneHousePrice';
 import UGPrice from '../views/internet/UG/UGPrice';
+import test from '../views/internet/test/test';
 // Интернет бизнес
 import ResidentialPricePage from '../views/internet/business/residential_complexes/ResidentialPricePage';
 import LobanovskogoPricePage from '../views/internet/business/lobanovskogo/LobanovskogoPricePage';
@@ -170,6 +171,11 @@ const routes = [
         name: 'BerkovetskayaPrice',
         path: '/internet/business/berkovetskaya',
         component: BerkovetskayaPricePage
+    },
+    {
+        name: 'test',
+        path: '/internet/test/test',
+        component: test
     },
 
     {

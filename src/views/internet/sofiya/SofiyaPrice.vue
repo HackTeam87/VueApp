@@ -4,7 +4,7 @@
     <v-container>
       <v-row no-gutters>
 
-        <v-col cols="12" sm="3" md="3" lg="3" v-cloak>
+        <v-col cols="12" sm="4" md="4" lg="4" v-cloak>
 
           <h3 class="heading" style="color:#002244;">Швидкість 30</h3>
           <div class="services_price">
@@ -21,7 +21,7 @@
           </p>
 
         </v-col>
-        <v-col cols="12" sm="3" md="3" lg="3" v-cloak>
+        <v-col cols="12" sm="4" md="4" lg="4" v-cloak>
 
           <h3 class="heading" style="color:#002244;">Швидкість 50</h3>
           <div class="services_price">
@@ -38,7 +38,7 @@
           </p>
 
         </v-col>
-        <v-col cols="12" sm="3" md="3" lg="3" v-cloak>
+        <v-col cols="12" sm="4" md="4" lg="4" v-cloak>
 
           <h3 class="heading" style="color:#002244;">Швидкість 100</h3>
           <div class="services_price">
@@ -55,23 +55,7 @@
           </p>
 
         </v-col>
-        <v-col cols="12" sm="3" md="3" lg="3" v-cloak>
 
-          <h3 class="heading" style="color:#002244;">Швидкість 500</h3>
-          <div class="services_price">
-
-            <div class="services__item" v-for="(service,index) in prices.price_500" :key="index"
-                 v-on:click="toggleActive(service)"
-                 v-bind:class="{ 'activate' : service.activate }">
-              <span>{{ service.name }}</span> <span>{{ service.price | currency }}</span>
-            </div>
-          </div>
-
-          <p class="total">
-            <span>Разом:</span> <span>{{ total_500() | currency }}/м</span>
-          </p>
-
-        </v-col>
 
         <br>
         <div class="container services_description">
@@ -84,8 +68,6 @@
             </ul>
           </div>
         </div>
-
-       
 
       </v-row>
     </v-container>
@@ -101,7 +83,7 @@ export default {
         price_30: [
           {
             name: '30 Мбіт/с',
-            price: 140,
+            price: 120,
             activate: true
           },
           {
@@ -111,8 +93,8 @@ export default {
           },
           {
             name: '+ TV 193 канали',
-            price: 30,
-            activate: false
+            price: 0,
+            activate: true
           },
           {
             name: '+ TV 245 каналів',
@@ -129,7 +111,7 @@ export default {
         price_50: [
           {
             name: '50 Мбіт/с',
-            price: 160,
+            price: 140,
             activate: true
           },
           {
@@ -137,10 +119,10 @@ export default {
             price: 50,
             activate: false
           },
-           {
+          {
             name: '+ TV 193 канали',
-            price: 30,
-            activate: false
+            price: 0,
+            activate: true
           },
           {
             name: '+ TV 245 каналів',
@@ -157,7 +139,7 @@ export default {
         price_100: [
           {
             name: '100 Мбіт/с',
-            price: 210,
+            price: 180,
             activate: true
           },
           {
@@ -165,38 +147,10 @@ export default {
             price: 50,
             activate: false
           },
-           {
+         {
             name: '+ TV 193 канали',
-            price: 30,
-            activate: false
-          },
-          {
-            name: '+ TV 245 каналів',
-            price: 50,
-            activate: false
-          },
-          
-          {
-            name: '+ TV 259 канали',
-            price: 100,
-            activate: false
-          }
-          ],
-        price_500: [
-          {
-            name: '500 Мбіт/с',
-            price: 300,
+            price: 0,
             activate: true
-          },
-          {
-            name: '+ Зовнішній IP',
-            price: 50,
-            activate: false
-          },
-           {
-            name: '+ TV 193 канали',
-            price: 30,
-            activate: false
           },
           {
             name: '+ TV 245 каналів',
@@ -242,17 +196,6 @@ export default {
     total_100: function () {
       var total = 0;
       this.prices.price_100.forEach(function (s) {
-        if (s.activate) {
-          total += s.price;
-        }
-      });
-
-
-      return total
-    },
-    total_500: function () {
-      var total = 0;
-      this.prices.price_500.forEach(function (s) {
         if (s.activate) {
           total += s.price;
         }
