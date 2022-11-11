@@ -41,7 +41,7 @@
                         <th>
                             Разом:
                             <br>
-                            <span style="color:steelblue;font-size: large;">{{ total_30()}}/міс</span>
+                            <span style="color:#4A148C;font-size: large;">{{ total_30()}}/міс</span>
                         </th>
                       </tr>
                     </thead>
@@ -82,7 +82,7 @@
                          <th>
                             Разом:
                             <br>
-                            <span style="color:steelblue;font-size: large;">{{ total_50()}}грн/міс</span>
+                            <span style="color:#4A148C;font-size: large;">{{ total_50()}}грн/міс</span>
                          </th>
                       </tr>
                     </thead>
@@ -123,7 +123,7 @@
                         <th>
                             Разом:
                             <br>
-                            <span style="color:steelblue;font-size: large;">{{ total_100()}}/міс</span>
+                            <span style="color:#4A148C;font-size: large;">{{ total_100()}}/міс</span>
                         </th>
                       </tr>
                     </thead>
@@ -165,7 +165,7 @@
                          <th>
                             Разом:
                             <br>
-                            <span style="color:steelblue;font-size: large;">{{ total_500()}}/міс</span>
+                            <span style="color:#4A148C;font-size: large;">{{ total_500()}}/міс</span>
                         </th>
                       </tr>
                     </thead>
@@ -220,88 +220,25 @@ export default {
           location: "ЖК Софіївський Квартал",
           prices: {
             price_30: [
-              { price_id: 1, name: "30 Мбіт/с", price: 120, checkbox: true, disabled: true},
-              {
-                price_id: 2,
-                name: "+ Зовнішній IP",
-                price: 50,
-                checkbox: false,
-              },
-              {
-                price_id: 3,
-                name: "+ TV 193 канали",
-                price: 0.0,
-                checkbox: true,
-                disabled: true
-              },
-              {
-                price_id: 4,
-                name: "+ TV 245 каналів",
-                price: 50.0,
-                checkbox: false,
-              },
-              {
-                price_id: 5,
-                name: "+ TV 259 канали",
-                price: 100.0,
-                checkbox: false,
-              },
+              {price_id: 1, name: "30 Мбіт/с", price: 120, checkbox: true, disabled: true},
+              {price_id: 2, name: "+ Зовнішній IP", price: 50, checkbox: false,},
+              {price_id: 3, name: "+ TV 193 канали",price: 0.0, checkbox: true, disabled: true},
+              {price_id: 4, name: "+ TV 245 каналів", price: 50.0, checkbox: false},
+              {price_id: 5, name: "+ TV 259 канали",  price: 100.0, checkbox: false},
             ],
             price_50: [
-              { price_id: 1, name: "50 Мбіт/с", price: 140, checkbox: true, disabled: true },
-              {
-                price_id: 2,
-                name: "+ Зовнішній IP",
-                price: 50,
-                checkbox: false,
-              },
-              {
-                price_id: 3,
-                name: "+ TV 193 канали",
-                price: 0.0,
-                checkbox: true,
-                disabled: true
-              },
-              {
-                price_id: 4,
-                name: "+ TV 245 каналів",
-                price: 50.0,
-                checkbox: false,
-              },
-              {
-                price_id: 5,
-                name: "+ TV 259 канали",
-                price: 100.0,
-                checkbox: false,
-              },
+              {price_id: 1, name: "50 Мбіт/с", price: 140, checkbox: true, disabled: true },
+              {price_id: 2, name: "+ Зовнішній IP", price: 50, checkbox: false},
+              {price_id: 3,  name: "+ TV 193 канали",price: 0.0, checkbox: true, disabled: true},
+              {price_id: 4,  name: "+ TV 245 каналів",price: 50.0, checkbox: false},
+              {price_id: 5,  name: "+ TV 259 канали", price: 100.0, checkbox: false},
             ],
             price_100: [
-              { price_id: 1, name: "100 Мбіт/с", price: 180, checkbox: true, disabled: true },
-              {
-                price_id: 2,
-                name: "+ Зовнішній IP",
-                price: 50,
-                checkbox: false,
-              },
-              {
-                price_id: 3,
-                name: "+ TV 193 канали",
-                price: 0.0,
-                checkbox: true,
-                disabled: true
-              },
-              {
-                price_id: 4,
-                name: "+ TV 245 каналів",
-                price: 50.0,
-                checkbox: false,
-              },
-              {
-                price_id: 5,
-                name: "+ TV 259 канали",
-                price: 100.0,
-                checkbox: false,
-              },
+              {price_id: 1, name: "100 Мбіт/с", price: 180, checkbox: true, disabled: true },
+              {price_id: 2, name: "+ Зовнішній IP", price: 50, checkbox: false},
+              {price_id: 3, name: "+ TV 193 канали", price: 0.0, checkbox: true, disabled: true},
+              {price_id: 4, name: "+ TV 245 каналів", price: 50.0, checkbox: false},
+              {price_id: 5, name: "+ TV 259 канали", price: 100.0, checkbox: false},
             ],
           },
         },
@@ -312,87 +249,24 @@ export default {
           prices: {
             price_30: [
               { price_id: 1, name: "30 Мбіт/с", price: 120, checkbox: true, disabled: true },
-              {
-                price_id: 2,
-                name: "+ Зовнішній IP",
-                price: 50,
-                checkbox: false,
-              },
-              {
-                price_id: 3,
-                name: "+ TV 193 канали",
-                price: 0.0,
-                checkbox: true,
-                disabled: true
-              },
-              {
-                price_id: 4,
-                name: "+ TV 245 каналів",
-                price: 50.0,
-                checkbox: false,
-              },
-              {
-                price_id: 5,
-                name: "+ TV 259 канали",
-                price: 100.0,
-                checkbox: false,
-              },
+              {price_id: 2,  name: "+ Зовнішній IP", price: 50, checkbox: false},
+              {price_id: 3,  name: "+ TV 193 канали", price: 0.0, checkbox: true, disabled: true},
+              {price_id: 4,  name: "+ TV 245 каналів", price: 50.0, checkbox: false},
+              {price_id: 5,  name: "+ TV 259 канали",  price: 100.0, checkbox: false},
             ],
             price_50: [
-              { price_id: 1, name: "50 Мбіт/с", price: 140, checkbox: true, disabled: true},
-              {
-                price_id: 2,
-                name: "+ Зовнішній IP",
-                price: 50,
-                checkbox: false,
-              },
-              {
-                price_id: 3,
-                name: "+ TV 193 канали",
-                price: 0.0,
-                checkbox: true,
-                disabled: true
-              },
-              {
-                price_id: 4,
-                name: "+ TV 245 каналів",
-                price: 50.0,
-                checkbox: false,
-              },
-              {
-                price_id: 5,
-                name: "+ TV 259 канали",
-                price: 100.0,
-                checkbox: false,
-              },
+              {price_id: 1, name: "50 Мбіт/с", price: 140, checkbox: true, disabled: true},
+              {price_id: 2,  name: "+ Зовнішній IP", price: 50, checkbox: false},
+              {price_id: 3,  name: "+ TV 193 канали", price: 0.0, checkbox: true, disabled: true},
+              {price_id: 4,  name: "+ TV 245 каналів", price: 50.0, checkbox: false},
+              {price_id: 5,  name: "+ TV 259 канали", price: 100.0, checkbox: false},
             ],
             price_100: [
-              { price_id: 1, name: "100 Мбіт/с", price: 180, checkbox: true, disabled: true},
-              {
-                price_id: 2,
-                name: "+ Зовнішній IP",
-                price: 50,
-                checkbox: false,
-              },
-              {
-                price_id: 3,
-                name: "+ TV 193 канали",
-                price: 0.0,
-                checkbox: true,
-                disabled: true
-              },
-              {
-                price_id: 4,
-                name: "+ TV 245 каналів",
-                price: 50.0,
-                checkbox: false,
-              },
-              {
-                price_id: 5,
-                name: "+ TV 259 канали",
-                price: 100.0,
-                checkbox: false,
-              },
+              {price_id: 1, name: "100 Мбіт/с", price: 180, checkbox: true, disabled: true},
+              {price_id: 2, name: "+ Зовнішній IP", price: 50, checkbox: false},
+              {price_id: 3, name: "+ TV 193 канали", price: 0.0, checkbox: true, disabled: true},
+              {price_id: 4, name: "+ TV 245 каналів", price: 50.0, checkbox: false},
+              {price_id: 5, name: "+ TV 259 канали",price: 100.0, checkbox: false},
             ],
           },
         },
@@ -402,112 +276,32 @@ export default {
           location: "Жк Променада",
           prices: {
             price_30: [
-              { price_id: 1, name: "30 Мбіт/с", price: 140, checkbox: true, disabled: true},
-              {
-                price_id: 2,
-                name: "+ Зовнішній IP",
-                price: 50,
-                checkbox: false,
-              },
-              {
-                price_id: 3,
-                name: "+ TV 193 канали",
-                price: 0.0,
-                checkbox: false,
-              },
-              {
-                price_id: 4,
-                name: "+ TV 245 каналів",
-                price: 50.0,
-                checkbox: false,
-              },
-              {
-                price_id: 5,
-                name: "+ TV 259 канали",
-                price: 100.0,
-                checkbox: false,
-              },
+              {price_id: 1, name: "30 Мбіт/с", price: 140, checkbox: true, disabled: true},
+              {price_id: 2, name: "+ Зовнішній IP", price: 50, checkbox: false},
+              {price_id: 3, name: "+ TV 193 канали", price: 0.0, checkbox: false},
+              {price_id: 4, name: "+ TV 245 каналів", price: 50.0, checkbox: false},
+              {price_id: 5, name: "+ TV 259 канали", price: 100.0,checkbox: false},
             ],
             price_50: [
-              { price_id: 1, name: "50 Мбіт/с", price: 160, checkbox: true, disabled: true},
-              {
-                price_id: 2,
-                name: "+ Зовнішній IP",
-                price: 50,
-                checkbox: false,
-              },
-              {
-                price_id: 3,
-                name: "+ TV 193 канали",
-                price: 0.0,
-                checkbox: false,
-              },
-              {
-                price_id: 4,
-                name: "+ TV 245 каналів",
-                price: 50.0,
-                checkbox: false,
-              },
-              {
-                price_id: 5,
-                name: "+ TV 259 канали",
-                price: 100.0,
-                checkbox: false,
-              },
+              {price_id: 1, name: "50 Мбіт/с", price: 160, checkbox: true, disabled: true},
+              {price_id: 2, name: "+ Зовнішній IP", price: 50, checkbox: false},
+              {price_id: 3, name: "+ TV 193 канали", price: 0.0, checkbox: false},
+              {price_id: 4, name: "+ TV 245 каналів", price: 50.0, checkbox: false},
+              {price_id: 5, name: "+ TV 259 канали", price: 100.0, checkbox: false},
             ],
             price_100: [
-              { price_id: 1, name: "100 Мбіт/с", price: 210, checkbox: true, disabled: true},
-              {
-                price_id: 2,
-                name: "+ Зовнішній IP",
-                price: 50,
-                checkbox: false,
-              },
-              {
-                price_id: 3,
-                name: "+ TV 193 канали",
-                price: 0.0,
-                checkbox: false,
-              },
-              {
-                price_id: 4,
-                name: "+ TV 245 каналів",
-                price: 50.0,
-                checkbox: false,
-              },
-              {
-                price_id: 5,
-                name: "+ TV 259 канали",
-                price: 100.0,
-                checkbox: false,
-              },
+              {price_id: 1, name: "100 Мбіт/с", price: 210, checkbox: true, disabled: true},
+              {price_id: 2, name: "+ Зовнішній IP", price: 50, checkbox: false},
+              {price_id: 3, name: "+ TV 193 канали", price: 0.0, checkbox: false},
+              {price_id: 4, name: "+ TV 245 каналів", price: 50.0, checkbox: false},
+              {price_id: 5, name: "+ TV 259 канали", price: 100.0, checkbox: false},
             ],
             price_500: [
-              { price_id: 1, name: "100 Мбіт/с", price: 300, checkbox: true, disabled: true},
-              {
-                price_id: 2,
-                name: "+ Зовнішній IP",
-                price: 50,
-                checkbox: false,
-              },
-              {
-                price_id: 3,
-                name: "+ TV 193 канали",
-                price: 0.0,
-                checkbox: false,
-              },
-              {
-                price_id: 4,
-                name: "+ TV 245 каналів",
-                price: 50.0,
-                checkbox: false,
-              },
-              {
-                price_id: 5,
-                name: "+ TV 259 канали",
-                price: 100.0,
-                checkbox: false,
-              },
+              {price_id: 1, name: "100 Мбіт/с", price: 300, checkbox: true, disabled: true},
+              {price_id: 2, name: "+ Зовнішній IP", price: 50, checkbox: false},
+              {price_id: 3, name: "+ TV 193 канали", price: 0.0, checkbox: false},
+              {price_id: 4, name: "+ TV 245 каналів", price: 50.0, checkbox: false},
+              {price_id: 5, name: "+ TV 259 канали", price: 100.0, checkbox: false},
             ],
           },
         },
@@ -921,13 +715,8 @@ export default {
               },
             ],
             price_100: [
-              { price_id: 1, name: "100 Мбіт/с", price: 180, checkbox: true, disabled: true},
-              {
-                price_id: 2,
-                name: "+ Зовнішній IP",
-                price: 50,
-                checkbox: false,
-              },
+              {price_id: 1, name: "100 Мбіт/с", price: 180, checkbox: true, disabled: true},
+              {price_id: 2,  name: "+ Зовнішній IP", price: 50, checkbox: false},
               {
                 price_id: 3,
                 name: "+ TV 193 канали",
